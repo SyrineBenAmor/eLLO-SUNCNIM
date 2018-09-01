@@ -22,3 +22,11 @@ docs/
 
 # Code coverage
 *.lst
+
+# Txt files
+*.txt
+
+# Image files
+*.jpg
+
+.gitignore
