@@ -4,7 +4,7 @@ import time
 
 import Accel
 import plan
-import Crack_Detection_V05_08 as crack
+import Crack_Detection as crack
 
 then = time.time()
 planSite ="Prototype vue de Haut.jpg"
