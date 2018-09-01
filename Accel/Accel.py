@@ -31,7 +31,7 @@ def getAcceleration():
             #******************* get data from sensor ,,open text file and store it *************************************
             
             if dt>next_time:
-                file = open("Accelertion.txt","a+") # a+ : open for reading and write at the end of file
+                file = open("Acceleration.txt","a+") # a+ : open for reading and write at the end of file
                 raw = accelerometer.get_xyz(raw=True)
                 g = accelerometer.get_xyz()
                 ms = accelerometer.get_xyz_ms2()
