@@ -30,3 +30,6 @@ docs/
 *.jpg
 
 .gitignore
+
+# ignore pyc
+*.pyc
