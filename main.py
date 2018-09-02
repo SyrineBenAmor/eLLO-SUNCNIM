@@ -2,8 +2,15 @@ import numpy as np
 import cv2
 import time
 
+import sys
+
+sys.path.append('Accelero/')
 import Accel
+
+sys.path.append('GPS/')
 import plan
+
+sys.path.append('Image_processing/')
 import Crack_Detection as crack
 
 then = time.time()
