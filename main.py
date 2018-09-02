@@ -14,7 +14,7 @@ sys.path.append('Image_processing/')
 import Crack_Detection as crack
 
 then = time.time()
-planSite ="Prototype vue de Haut.jpg"
+planSite ="GPS/Prototype vue de Haut.jpg"
 
 #*************************************************************************
 def main():
