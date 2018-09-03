@@ -9,7 +9,7 @@ Distance=[]
 y=[]
 z=[]
 #********************** Acceleration Graphe*****************
-with open('Accelertion.txt','r') as csvfile:
+with open('Acceleration.txt','r') as csvfile:
     plots = csv.reader(csvfile, delimiter=',')
     for row in plots:
         t.append(row[0])
