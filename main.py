@@ -21,7 +21,7 @@ def main():
     crackedMiror = crack.detectcrack()
     print("list of name for all image which has cracks \n",crackedMiror) 
     
-    planMasked = plan.imageProcess(planSite)
+    planMasked = plan.filter(planSite)
     cv2.imshow("Mask Applied", planMasked)
 
     planWithContours, contours = plan.drawContoursOfMiror (planMasked,planSite)

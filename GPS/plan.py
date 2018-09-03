@@ -6,8 +6,7 @@ widthMiror = 160 # longeur miroir = 160 cm
 
 global planSite
 
-def imageProcess(planSite):
-    
+def filter(planSite):
 
     plan_orig = cv2.imread(planSite)
     plan = cv2.cvtColor(plan_orig, cv2.COLOR_BGR2GRAY)
