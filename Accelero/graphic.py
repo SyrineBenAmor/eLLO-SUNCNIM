@@ -29,7 +29,7 @@ plt.legend()
 #plt.savefig('graph3.png')
 
 #********************** Distance Graphe*****************
-with open('Distance.txt','r') as csvfile:
+with open('Accelero/Distance.txt','r') as csvfile:
     plots = csv.reader(csvfile, delimiter=',')
     for row in plots:
         t.append(row[0])
