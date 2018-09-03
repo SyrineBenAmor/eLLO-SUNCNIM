@@ -1,15 +1,17 @@
-
 import matplotlib.pyplot as plt
 import numpy as np
 import csv
 import cv2
-t= []
+
+pathToDistanceFile = 'Accelero/Distance.txt'
+pathToAccelerationFile = 'Acceleration.txt'
+
 total=[]
-Distance=[]
+
 y=[]
 z=[]
 #********************** Acceleration Graphe*****************
-with open('Acceleration.txt','r') as csvfile:
+with open(pathToAccelerationFile,'r') as csvfile:
     plots = csv.reader(csvfile, delimiter=',')
     for row in plots:
         t.append(row[0])
@@ -27,17 +29,20 @@ plt.ylabel('x,y,z')
 plt.title('graph acceleration')
 plt.legend()
 #plt.savefig('graph3.png')
+plotDistance()
 
-#********************** Distance Graphe*****************
-with open('Accelero/Distance.txt','r') as csvfile:
-    plots = csv.reader(csvfile, delimiter=',')
-    for row in plots:
-        t.append(row[0])
-        Distance.append(row[1])
-plt.figure(2)      
-plt.plot(Distance,label = 'Distance', color= 'red')
-plt.xlabel('t(s)')
-plt.ylabel('Ditance(cm)')
-plt.title('graph distance')
-plt.legend()
-plt.show()
+def plotDistance():
+    #********************** Distance Graphe*****************
+    time = [];Distance=[]
+    with open(pathToDistanceFile,'r') as csvfile:
+        rows = csv.reader(csvfile, delimiter=',')
+        for row in rows:
+            time.append(row[0])
+            Distance.append(row[1])
+    plt.figure(2)      
+    plt.plot(Distance,label = 'Distance', color= 'red')
+    plt.xlabel('t(s)')
+    plt.ylabel('Ditance(cm)')
+    plt.title('graph distance')
+    plt.legend()
+    plt.show()
