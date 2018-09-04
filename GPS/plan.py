@@ -42,15 +42,13 @@ def listOfContours (Masked_image):
             listOfContours.append(contour)
     return listOfContours
 
-def drawContoursOfMiror (masked_image,planSite ):
+def origin(image):
+    _,contours,_ = cv2.findContours(image, 1, 2)
+    rect = cv2.minAreaRect(contours[7])
+    newOrigin = rect[0]
+    return newOrigin
 
-    plan_orig = cv2.imread(planSite)
-    _,contours,_ = cv2.findContours(masked_image,1,2)
-    nbContoursFound = len(contours)
-    rectOfAllMiror = []
-    
-    # Color all the perimeter of mirors
-    for cnt in contours :
+
 
 def statePoint(coordinatePoint,listOfContours):
     listOfDistance = []
