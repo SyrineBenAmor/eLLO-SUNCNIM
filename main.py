@@ -11,7 +11,7 @@ sys.path.append('GPS/')
 import plan
 
 sys.path.append('Image_processing/')
-import Crack_Detection as crack
+import Crack_Detection as detection
 
 then = time.time()
 planSite ="GPS/Prototype vue de Haut.jpg"
