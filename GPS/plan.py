@@ -57,35 +57,20 @@ def statePoint(coordinatePoint,listOfContours):
     for contour in listOfContours: 
 
         distance = cv2.pointPolygonTest(contour,coordinatePoint,True)             #it returns +distance if the point is inside the contour
-        listOfDistance.append(distance)                                     #it returns -distance if the point is outside the contour
+                                                                             #it returns -distance if the point is outside the contour
                                                                             #it returns 0 if the point is on the contour  
-        rect = cv2.minAreaRect(cnt)
-        
-        if 1<rect[1][0] < mirorRect['width'] and 0 < rect[1][1] < mirorRect['height'] :
-            box= cv2.boxPoints(rect)
-            box = np.int0(box)
-            cv2.drawContours(plan_orig,[box],0,(255,0,0),2)
-            rectOfAllMiror.append(rect)
-                    
-    return (plan_orig, rectOfAllMiror)
-'''
-def convertCoordinateToPixels(coordinateX , coordinateY, rect):
+        if  (distance >= 0) :
+            print("point is inside the contour",contour)
+            return contour
+            
+        else:
+            if (abs(distance) < abs(ShortestDistance)):
+                ShortestDistance = distance
+                shortestContour = contour
+                
+    return shortestContour
 
-    rect = cv2.minAreaRect(contours[7])
-    NeworiginPointRepairX = rect[0][0]
-    NeworiginPointRepairY = rect[0][1]
-    
-    coordinatePixelH = (rect[1][0] * coordinateX )/heightMiror
-    coordinatePixelW = (rect[1][1] * coordinateY) /widthMiror
-    
-    return (coordinatePixelH,coordinatePixelW )
 
-x,y = convertCoordinateToPixels(10,100)
-print(x,y)
-            #get the first rect coordinate point to fix new origin repair
-        
-    print(NeworiginPointRepairX,NeworiginPointRepairY)   
-'''    
 
 def changeColorInsideContour(image,Contour):
     
