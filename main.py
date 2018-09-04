@@ -18,16 +18,26 @@ planSite ="GPS/Prototype vue de Haut.jpg"
 
 #*************************************************************************
 def main():
-    crackedMiror = crack.detectcrack()
+    crackedMiror = detection.detectcrack()
     print("list of name for all image which has cracks \n",crackedMiror) 
     
     planMasked = plan.filter(planSite)
     cv2.imshow("Mask Applied", planMasked)
 
-    planWithContours, contours = plan.drawContoursOfMiror (planMasked,planSite)
-    print ("total caisson in site ( 14 lignes * 8 caissons = ",len(contours) )
-    cv2.imshow('contours',planWithContours)
+    listOfContours = plan.listOfContours(planMasked)
+    #print(plan.origin(planMasked))
     
+    print ("total caisson in site ( 14 lignes * 8 caissons = ",len(listOfContours) )
+    #cv2.imshow('contours',planWithContours)
+
+    coordinate_origin = plan.origin(planMasked)
+    print("coordonnees (x,y) du nouveau origine = ",coordinate_origin)
+    
+    
+    contour = plan.statePoint(coordinate_origin, listOfContours)
+    
+    imageWithColored_Contour=plan.changeColorInsideContour(planSite,contour)
+    cv2.imshow("image colore",imageWithColored_Contour)
     
     print("Execution Time = "+str(float(time.time() - then)) + " s")
     '''
