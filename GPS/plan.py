@@ -31,6 +31,17 @@ def filter(planSite):
     
     return (masked_image)
 
+def listOfContours (Masked_image):
+
+    _,contours,_ = cv2.findContours(Masked_image, 1, 2)
+    listOfContours = []
+    # Find all caisson
+    for contour in contours :
+        rect = cv2.minAreaRect(contour)
+        if (1<rect[1][0] < mirorRect['width']) and (0 < rect[1][1] < mirorRect['height']) :
+            listOfContours.append(contour)
+    return listOfContours
+
 def drawContoursOfMiror (masked_image,planSite ):
 
     plan_orig = cv2.imread(planSite)
