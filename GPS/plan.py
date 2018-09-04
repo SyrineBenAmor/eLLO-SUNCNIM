@@ -77,3 +77,10 @@ print(x,y)
     print(NeworiginPointRepairX,NeworiginPointRepairY)   
 '''    
 
+def changeColorInsideContour(image,Contour):
+    
+    image = cv2.imread(image)
+    cv2.drawContours(image,[Contour],0,(0,0,255),-1) # for filling inside a specific contour
+
+    return image
+        
