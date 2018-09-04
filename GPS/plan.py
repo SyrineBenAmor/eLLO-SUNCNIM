@@ -28,7 +28,8 @@ def filter(planSite):
     cv2.fillPoly(mask, vertices, 255)                               # fill the inside of polygon with white 
     masked_image = cv2.bitwise_and(thresh, mask)                    # apply the mask to the binary image
     
-    return (masked_image)
+    return masked_image
+
 
 def listOfContours (Masked_image):
 
