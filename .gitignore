@@ -33,3 +33,6 @@ docs/
 
 # ignore pyc
 *.pyc
+
+#ignore json
+*.json
