@@ -1,8 +1,8 @@
 import numpy as np
 import cv2
 mirorRect = {'width' : 14, 'height' : 86}
-heightMiror = 100 # largeur miroir = 100 cm
-widthMiror = 160 # longeur miroir = 160 cm
+heightMirror = 100 # largeur miroir = 100 cm
+widthMirror = 160 # longeur miroir = 160 cm
 
 global planSite
 
