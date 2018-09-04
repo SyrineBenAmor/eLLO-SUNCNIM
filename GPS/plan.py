@@ -41,6 +41,14 @@ def drawContoursOfMiror (masked_image,planSite ):
     # Color all the perimeter of mirors
     for cnt in contours :
 
+def statePoint(coordinatePoint,listOfContours):
+    listOfDistance = []
+    ShortestDistance = -500
+    for contour in listOfContours: 
+
+        distance = cv2.pointPolygonTest(contour,coordinatePoint,True)             #it returns +distance if the point is inside the contour
+        listOfDistance.append(distance)                                     #it returns -distance if the point is outside the contour
+                                                                            #it returns 0 if the point is on the contour  
         rect = cv2.minAreaRect(cnt)
         
         if 1<rect[1][0] < mirorRect['width'] and 0 < rect[1][1] < mirorRect['height'] :
