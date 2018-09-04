@@ -51,8 +51,9 @@ def origin(image):
 
 
 def statePoint(coordinatePoint,listOfContours):
-    listOfDistance = []
-    ShortestDistance = -500
+    
+    ShortestDistance = -50000
+    shortestContour = 0
     for contour in listOfContours: 
 
         distance = cv2.pointPolygonTest(contour,coordinatePoint,True)             #it returns +distance if the point is inside the contour
