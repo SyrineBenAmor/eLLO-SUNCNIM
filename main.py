@@ -38,10 +38,11 @@ def main():
     print("coordinate in pixels=",coordinateInpixel) 
     cv2.imshow("line",image)
     
+    contour = plan.findCaisson(coordinateInpixel, listOfCaisson)
     
-    imageWithColored_Contour=plan.changeColorInsideContour(planSite,contour)
-    cv2.imshow("image colore",imageWithColored_Contour)
-    
+    imageWithColored_Caisson=plan.colorCaisson(planSite,contour)
+    cv2.imshow("image colore",imageWithColored_Caisson)
+  
     print("Execution Time = "+str(float(time.time() - then)) + " s")
     '''
     total_axes = Accel.getAcceleration()
