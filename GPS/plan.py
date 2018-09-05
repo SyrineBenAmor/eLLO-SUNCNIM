@@ -5,9 +5,9 @@ heightSite = 18.55 # largeur site =  18,55 m
 widthSite = 53.348 # longeur site = 53,348 m
 
 
-def filter(planSite):
+def filter(image):
 
-    plan_orig = cv2.imread(planSite)
+    plan_orig = cv2.imread(image)
     plan = cv2.cvtColor(plan_orig, cv2.COLOR_BGR2GRAY)
     rows, cols = plan.shape[:2]
     print("Image Dimensions : " +str([rows, cols]))
