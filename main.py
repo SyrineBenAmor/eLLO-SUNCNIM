@@ -33,16 +33,21 @@ def main():
     coordinate_origin = plan.origin(planMasked)
     print("coordonnees (x,y) du nouveau origine = ",coordinate_origin)
     
-    realCoordinate = (80,18)
+    realCoordinate = (1,1)
     image,coordinateInpixel = plan.convertRealCoordinateToPixel(planSite,realCoordinate)
     print("coordinate in pixels=",coordinateInpixel) 
     cv2.imshow("line",image)
     
-    contour = plan.findCaisson(coordinateInpixel, listOfCaisson)
+
+
+    ancientCoordinate= plan.ancientPointCoordinate(coordinate_origin,coordinateInpixel)
+    print("coordonnee dans l ancien repere",ancientCoordinate)
+
+    contour = plan.findCaisson(ancientCoordinate, listOfCaisson)
     
     imageWithColored_Caisson=plan.colorCaisson(planSite,contour)
     cv2.imshow("image colore",imageWithColored_Caisson)
-  
+
     print("Execution Time = "+str(float(time.time() - then)) + " s")
     '''
     total_axes = Accel.getAcceleration()
