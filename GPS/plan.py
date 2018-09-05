@@ -52,25 +52,23 @@ def origin(image):
 
 
 
-def statePoint(coordinatePoint,listOfContours):
+def findCaisson(pointCoordinate,listOfCaisson):
     
-    ShortestDistance = -50000
-    shortestContour = 0
-    for contour in listOfContours: 
-
-        distance = cv2.pointPolygonTest(contour,coordinatePoint,True)             #it returns +distance if the point is inside the contour
+    ShortestDistanceToCaisson = -1000
+    nearestCaisson = 0
+    for caisson in listOfCaisson:
+        distance = cv2.pointPolygonTest(caisson,pointCoordinate,True)             #it returns +distance if the point is inside the contour
                                                                              #it returns -distance if the point is outside the contour
                                                                             #it returns 0 if the point is on the contour  
         if  (distance >= 0) :
-            print("point is inside the contour",contour)
-            return contour
-            
+            print("point is inside the contour",caisson)
+            return caisson
         else:
-            if (abs(distance) < abs(ShortestDistance)):
-                ShortestDistance = distance
-                shortestContour = contour
-                
-    return shortestContour
+            if (abs(distance) < abs(ShortestDistanceToCaisson)):
+                ShortestDistanceToCaisson = distance
+                nearestCaisson = caisson
+                print("point is near to the contour",nearestCaisson)
+    return nearestCaisson
 
 
 def changeColorInsideContour(image,contour):
