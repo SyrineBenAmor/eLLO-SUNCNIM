@@ -77,3 +77,20 @@ def colorCaisson(image, caisson):
     cv2.drawContours(image,[caisson], 0,(0,0,255),-1) # for filling inside a specific contour
     
     return image
+
+def convertRealCoordinateToPixel(image,realCoordinate):
+    x=61
+    y= 579
+    coordinatepointOrig = (x,y) 
+    coordinatepoint1 = (769,y)
+    coordinatepoint2 = (x,335)
+
+    image = cv2.imread(image)
+    cv2.line(image,coordinatepointOrig,coordinatepoint1,(255,0,0),1)
+
+    coordinateInPixelX = (realCoordinate[0]*(coordinatepoint1[0]-x))/widthSite
+    coordinateInPixelY = (realCoordinate[1]*(y-coordinatepoint2[1]))/heightSite
+    coordinateInpixel = (coordinateInPixelX,coordinateInPixelY)
+    return image, coordinateInpixel
+
+    
