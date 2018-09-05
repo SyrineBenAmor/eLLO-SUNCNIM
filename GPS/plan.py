@@ -45,7 +45,9 @@ def listOfCaisson (Masked_image):
 def origin(image):
     _,contours,_ = cv2.findContours(image, 1, 2)
     rect = cv2.minAreaRect(contours[7])
-    newOrigin = rect[0]
+    widthcaisson = 84
+    heightcaisson = 12
+    newOrigin = (int(rect[0][0]-widthcaisson/2),int(rect[0][1]+heightcaisson/2))
     return newOrigin
 
 
