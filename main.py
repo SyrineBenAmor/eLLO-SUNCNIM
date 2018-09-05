@@ -24,10 +24,10 @@ def main():
     planMasked = plan.filter(planSite)
     cv2.imshow("Mask Applied", planMasked)
 
-    listOfContours = plan.listOfContours(planMasked)
+    listOfCaisson = plan.listOfCaisson(planMasked)
     #print(plan.origin(planMasked))
     
-    print ("total caisson in site ( 14 lignes * 8 caissons = ",len(listOfContours) )
+    print ("total caisson in site ( 14 lignes * 8 caissons = ",len(listOfCaisson) )
     #cv2.imshow('contours',planWithContours)
 
     coordinate_origin = plan.origin(planMasked)
