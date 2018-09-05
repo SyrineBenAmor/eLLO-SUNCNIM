@@ -1,8 +1,8 @@
 import numpy as np
 import cv2
 mirorRect = {'width' : 14, 'height' : 86}
-heightMirror = 100 # largeur miroir = 100 cm
-widthMirror = 160 # longeur miroir = 160 cm
+heightSite = 18.55 # largeur site =  18,55 m
+widthSite = 53.348 # longeur site = 53,348 m
 
 
 def filter(planSite):
@@ -76,4 +76,3 @@ def changeColorInsideContour(image,contour):
     image = cv2.imread(image)
     cv2.drawContours(image,[contour], 0,(0,0,255),-1) # for filling inside a specific contour
     return image
-
