@@ -93,4 +93,9 @@ def convertRealCoordinateToPixel(image,realCoordinate):
     coordinateInpixel = (coordinateInPixelX,coordinateInPixelY)
     return image, coordinateInpixel
 
-    
+def ancientPointCoordinate(newOrigin,newCoordinate):
+
+    ancientCoordinatePointX= newCoordinate[0]+newOrigin[0]
+    ancientCoordinatePointY= newCoordinate[1]+newOrigin[1]
+    ancientCoordinate = (ancientCoordinatePointX,ancientCoordinatePointY)
+    return ancientCoordinate
