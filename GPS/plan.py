@@ -71,8 +71,9 @@ def findCaisson(pointCoordinate,listOfCaisson):
     return nearestCaisson
 
 
-def changeColorInsideContour(image,contour):
+def colorCaisson(image, caisson):
 
     image = cv2.imread(image)
-    cv2.drawContours(image,[contour], 0,(0,0,255),-1) # for filling inside a specific contour
+    cv2.drawContours(image,[caisson], 0,(0,0,255),-1) # for filling inside a specific contour
+    
     return image
