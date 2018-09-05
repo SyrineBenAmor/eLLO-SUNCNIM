@@ -33,8 +33,11 @@ def main():
     coordinate_origin = plan.origin(planMasked)
     print("coordonnees (x,y) du nouveau origine = ",coordinate_origin)
     
+    realCoordinate = (80,18)
+    image,coordinateInpixel = plan.convertRealCoordinateToPixel(planSite,realCoordinate)
+    print("coordinate in pixels=",coordinateInpixel) 
+    cv2.imshow("line",image)
     
-    contour = plan.statePoint(coordinate_origin, listOfContours)
     
     imageWithColored_Contour=plan.changeColorInsideContour(planSite,contour)
     cv2.imshow("image colore",imageWithColored_Contour)
