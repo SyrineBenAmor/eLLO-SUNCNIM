@@ -9,6 +9,7 @@ import Accel
 
 sys.path.append('GPS/')
 import plan
+from plan import pinMap
 
 sys.path.append('Image_processing/')
 import Crack_Detection as detection
@@ -20,35 +21,14 @@ planSite ="GPS/Prototype vue de Haut.jpg"
 def main():
     crackedMiror = detection.detectcrack()
     print("list of name for all image which has cracks \n",crackedMiror) 
+    realCoordinate = (26.9,3)
+    siteMap = pinMap(planSite)
     
-    planMasked = plan.filter(planSite)
-    cv2.imshow("Mask Applied", planMasked)
-
-    listOfCaisson = plan.listOfCaisson(planMasked)
-    #print(plan.origin(planMasked))
-    
-    print ("total caisson in site ( 14 lignes * 8 caissons = ",len(listOfCaisson) )
-    #cv2.imshow('contours',planWithContours)
-
-    coordinate_origin = plan.origin(planMasked)
-    print("coordonnees (x,y) du nouveau origine = ",coordinate_origin)
-    
-    realCoordinate = (1,1)
-    image,coordinateInpixel = plan.convertRealCoordinateToPixel(planSite,realCoordinate)
-    print("coordinate in pixels=",coordinateInpixel) 
-    cv2.imshow("line",image)
-    
-
-
-    ancientCoordinate= plan.ancientPointCoordinate(coordinate_origin,coordinateInpixel)
-    print("coordonnee dans l ancien repere",ancientCoordinate)
-
-    contour = plan.findCaisson(ancientCoordinate, listOfCaisson)
-    
-    imageWithColored_Caisson=plan.colorCaisson(planSite,contour)
-    cv2.imshow("image colore",imageWithColored_Caisson)
+    image = siteMap.brokenMirrors(realCoordinate)
+    cv2.imshow("Image with red caisson ", image)
 
     print("Execution Time = "+str(float(time.time() - then)) + " s")
+
     '''
     total_axes = Accel.getAcceleration()
     print("sum of the 3 axes = ",total_axes)
