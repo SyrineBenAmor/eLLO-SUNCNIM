@@ -1,9 +1,11 @@
-'''Prints the accelerometer values every second.'''
+''' Accelerometer, Velocity and Displacement python service'''
 import time
 import datetime
-from microstacknode.hardware.accelerometer.mma8452q import MMA8452Q
-import math
+import numpy
+import pandas
 
+import math
+from microstacknode.hardware.accelerometer.mma8452q import MMA8452Q
 
 G_RANGE = 2
 INTERVAL = 0.5  # seconds
