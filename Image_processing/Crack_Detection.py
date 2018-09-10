@@ -20,7 +20,7 @@ def detectcrack():
         mean = int(gray.mean())    
         #print("mean = " ,str(mean))
         thresh = syrine.threshold(gray,"triangle")     # binarization of the loaded image
-        #syrine.show('Binarized Image '+str(i),thresh)
+        syrine.show('Binarized Image '+str(i),thresh)
         alpha = 3.0
         beta= 0
         contrast = syrine.contrast(gray, alpha, beta)
