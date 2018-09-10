@@ -1,13 +1,17 @@
 '''Prints the latitude and longitude every second.'''
 import time
-from microstacknode.hardware.gps.l80gps import L80GPS
+import microstacknode.hardware.gps.l80gps 
 
+gps = microstacknode.hardware.gps.l80gps.L80GPS()
 
-if __name__ == '__main__':
-    gps = L80GPS()
-    while True:
-        gpgll = gps.get_gpgll()
-        print('latitude:  {}'.format(gpgll['latitude']))
-        print('longitude: {}'.format(gpgll['longitude']))
-        print()
-        time.sleep(1)
+def getGPSvalue():
+    data = gps.get_gprmc()
+    lat = data.get("latitude")
+    long = data.get("longitude")
+    speed = data.get("speed")
+    print(lat,long)
+    file = open("GPSvalue.txt","a+")
+    file.write("{},{},{},{}\n".format(time.time(),lat,long,speed))
+    file.close()
+    time.sleep(1)
+    return (lat,long,speed)
