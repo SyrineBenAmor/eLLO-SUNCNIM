@@ -8,80 +8,175 @@ import math
 from microstacknode.hardware.accelerometer.mma8452q import MMA8452Q
 
 G_RANGE = 2
-INTERVAL = 0.5  # seconds
-adjustZ = 9.80665 #standard Gravity
-distance_intial = 0
+GRAVITY = 9.80665 # in SI units (m/s^2)
+SAMPLE_CALIBRATION = 1024 # number of sampples
+SAMPLE_FILTERING = 100 # rolling mean samples number
+WINDOW_FILTERING = 20 # rolling mean window
+#T = 0.2  # seconds. Sample rate (5 Hz)
+T = 2  # seconds. Sample rate (50 Hz)
+#T = 0.002  # seconds. Sample rate (500 Hz)
+R = 1 # sample transport rate in minutes
 
-
-def getAcceleration():
-    with MMA8452Q() as accelerometer:
-        # Configure accelerometer
-        accelerometer.standby()
-        accelerometer.set_g_range(G_RANGE)
-        accelerometer.activate()
-        print("g = {}".format(G_RANGE))
-        time.sleep(INTERVAL)  # settle
-        
-        
-        while True:
-            #declare time
-            initial_time = time.time()
-            delta= datetime.timedelta(seconds = 1)  # delta =    0:00:01
-            next_time = datetime.datetime.now()     #next_time =  12:00:36.212448 
-            dt = datetime.datetime.now()            # dt =        12:00:36.229735
-
-            #******************* get data from sensor ,,open text file and store it *************************************
+REPOSITORY = "./repository";
+HUBNAME = "accelcat";
+def gatherDistance():
+    # calibration: This calibration routine removes the acceleration offset component in the sensor output due
+    # to the earth's gravity (static acceleration)
+    def auto_calibration():
+        sstatex = 0
+        sstatey = 0
+        sstatez = 0
+        for i in range(0, SAMPLE_CALIBRATION):
+            ms = accelerometer.get_xyz_ms2()
             
-            if dt>next_time:
-                file = open("Acceleration.txt","a+") # a+ : open for reading and write at the end of file
-                raw = accelerometer.get_xyz(raw=True)
-                g = accelerometer.get_xyz()
-                ms = accelerometer.get_xyz_ms2()
-                print("----")
-                print(datetime.datetime.now())
-                print('  raw | x: {}, y: {}, z: {}'.format(raw['x'],raw['y'],raw['z']))
-                print('    G | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(g['x'],g['y'],g['z']))
-                X = ms['x']
-                Y = ms['y']
-                Z = ms['z'] - adjustZ
-                print('m/s^2 | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(X,Y,Z))
-                
-                total_axes = math.sqrt(X**2+Y**2+Z**2)
-                print("total_axes: "+str(total_axes)+"m/s^2")
-                
-                # calcul angles and conversion in degree
-                angleX = round(math.asin(X/ total_axes )*180.0/3.1416)
-                angleY = round(math.asin(Y/ total_axes )*180.0/3.1416)
-                angleZ = round(math.acos(Z/ total_axes )*180.0/3.1416)
-                #print('anglex', angleX)
-                #print('angley', angleY)
-                #print('anglez', angleZ)
+            sstatex = sstatex + ms['x']
+            sstatey = sstatey + ms['y']
+            sstatez = sstatez + ms['z']
 
-                #save data 
-                file.write("{},{}\n".format(time.time(),total_axes))
-                file.close()
-                next_time= dt + delta
-                time.sleep(INTERVAL)
-    return(total_axes)    
-#**************************create new text file to store distance*****************************************
+        sstatex = sstatex / SAMPLE_CALIBRATION  # m/s^2
+        sstatey = sstatey / SAMPLE_CALIBRATION # m/s^2
+        sstatez = (sstatez / SAMPLE_CALIBRATION) - GRAVITY # m/s^2
 
-def calculateDistance (total_axes):               
-    t= time.time()-initial_time
-    #print("time = " + str(t))
-    file = open("Distance.txt","a+")
-    #calculate distance every tow consecutive times
-    distance_now = (0.5* total_axes* (t)**2)*100
-    print("distance=  "+str(Distance)+"cm")
-    #calculate total distance at the end of process
-    distance_total = distance_intial+ distance_now 
-    distance_intial = distance_total
-    print("distance total = " + str(distance_total)+"cm")
-    #save modified file
-    file.write("{},{}\n".format(time.time(),distance_now))
-    file.close()
-    time.sleep(INTERVAL)
-    return(distance_total )
-                
+        return (sstatex, sstatey, sstatez)
+
+    # low pass filtering: pandas rolling mean
+    def low_pass_filtering(s, N):
+        # return pandas.rolling_mean(x, N)[N-1:]
+        return s.rolling(window=N, win_type='triang').mean()
                
+    if __name__ == '__main__':
+        # STEP01: initialize transport time and final meassures
+        ti = time.time()
+
+        AxF=0
+        AyF=0
+        AzF=0
+        VxF=0
+        VyF=0
+        VzF=0
+        DxF=0
+        DyF=0
+        DzF=0
+
+        # connect to the accelerometer device MMA8452Q
+        with MMA8452Q() as accelerometer:
+            # STEP02: Configure accelerometer
+            accelerometer.standby()
+            accelerometer.set_g_range(G_RANGE)
+            accelerometer.activate()
+            print("Accelerometer G range configuration = {}".format(G_RANGE) + "\n")
+            time.sleep(T)
+
+            # STEP03: auto-calibration
+            Cax, Cay, Caz = auto_calibration()
+            print('----')
+            print('Auto-calibration data | x: {}, y: {}, z: {}'.format(Cax, Cay, Caz) + "\n")
             
+            Aix = 0
+            Aiy = 0
+            Aiz = 0
+            Vix = 0
+            Viy = 0
+            Viz = 0
+            
+            while True:
+                # STEP04: apply a convolution filter to the three axis (moving average filter)
+                # extract the raw data from the three accelerometer axis
+                index = range(0, SAMPLE_FILTERING)
+                filtval = []
+                for i in index:
+                    filtval.append(accelerometer.get_xyz_ms2())
+
+                # create the data frame from the raw data to be filtered
+                dataFrame = pandas.DataFrame(filtval, index=index, columns=list('xyz'))
                 
+                # apply the convolution filter to the data frame
+                dataFiltered = low_pass_filtering(dataFrame, WINDOW_FILTERING)
+
+                for index, ms in dataFiltered.iterrows():
+                   # STEP05: calculate displacement and velocity using a trapezoidal method integration
+                   # velocity integration from acceleration
+                   # displacement integration from velocity
+                   # remove gravity from z axis
+                    if numpy.isnan(ms['z']):
+                       continue
+
+                    if ms['x'] >=0:
+                        Ax = (ms['x'] - Cax) * 1000 # mm/s^2
+                        Vx = Aix * T + abs((Ax - Aix) / 2) * T # mm/s
+                        Dx = Vix * T + abs((Vx - Vix) / 2) * T # mm
+                    else:
+                        Ax = (ms['x'] - Cax) * 1000 # mm/s^2
+                        Vx = Aix * T - abs((Ax - Aix) / 2) * T # mm/s
+                        Dx = Vix * T - abs((Vx - Vix) / 2) * T # mm
+                    
+                    Aix = Ax
+                    Vix = Vx
+
+                    if ms['y'] >=0:
+                        Ay = (ms['y'] - Cay) * 1000 # mm/s^2
+                        Vy = Aiy * T + abs((Ay - Aiy) / 2) * T # mm/s
+                        Dy = Viy * T + abs((Vy - Viy) / 2) * T # mm
+                    else:
+                        Ay = (ms['y'] - Cay) * 1000 # mm/s^2
+                        Vy = Aiy * T - abs((Ay - Aiy) / 2) * T # mm/s
+                        Dy = Viy * T - abs((Vy - Viy) / 2) * T # mm           
+
+                    Aiy = Ay
+                    Viy = Vy
+
+                    if ms['z'] >=0:
+                        Az = (ms['z'] - Caz - GRAVITY) * 1000 # mm/s^2
+                        Vz = Aiz * T + abs((Az - Aiz) / 2) * T # mm/s
+                        Dz = Viz * T + abs((Vz - Viz) / 2) * T # mm
+                    else:
+                        Az = (ms['z'] - Caz + GRAVITY) * 1000 # mm/s^2
+                        Vz = Aiz * T - abs((Az - Aiz) / 2) * T # mm/s
+                        Dz = Viz * T - abs((Vz - Viz) / 2) * T # mm
+
+                    Aiz = Az                                 
+                    Viz = Vz
+                    
+                    # STEP06: get the maximun value in the three axis
+                    if VxF < abs(Vx):
+                        AxF = abs(Ax)
+                        VxF = abs(Vx)
+                        DxF = DxF + Dx
+
+                    if VyF < abs(Vy):
+                        AyF = abs(Ay)
+                        VyF = abs(Vy)
+                        DyF = DyF +(Dy)
+
+                    if VzF < abs(Vz):
+                        AzF = abs(Az)
+                        VzF = abs(Vz)
+                        DzF = DzF +(Dz)
+                    
+                    
+
+                    # logging result
+                    print('----')
+                    print('Acceleration [mm/s^2] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(AxF, AyF, AzF))
+                    print('Velocity [mm/s] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(VxF, VyF, VzF))
+                    print('Distance [mm] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(DxF, DyF, DzF))
+                    print("\n")
+                    file = open("Distance.txt","a+")
+                    file.write("{},{},{},{}\n".format(time.time(),DxF,DyF,DzF))
+                    file.close()
+                    # initialize transport time and final meassures
+                    ti = time.time()
+
+                    AxF=0
+                    AyF=0
+                    AzF=0
+                    VxF=0
+                    VyF=0
+                    VzF=0
+                    DxF=0
+                    DyF=0
+                    DzF=0
+
+                    # next data (T sample rate) 
+                    time.sleep(T)
+    return(DxF, DyF, DzF)
