@@ -5,13 +5,14 @@ from datetime import datetime, timedelta
 import os
 
 
-startHour   = 9
-startMinute = 25
-finishHour  = 9
-finishMinute = 26
+startHour   = 14
+startMinute = 6
+finishHour  = 14
+finishMinute = 59
 
 
 import Accel
+import gps
 
 with picamera.PiCamera() as camera :
     #************fix the values to take photos with same terms of brightness
@@ -20,7 +21,6 @@ with picamera.PiCamera() as camera :
     #low light : very slow framerate (1/6) (Max framerate = 15 )
     f= camera.framerate
     f= Fraction(1 ,8)
-    print('the framerate %d%d fps' %(f.numerator, f.denominator))
     #wait for the automatic gain control to settle
     #time.sleep(2)
     #choose the exposure time
@@ -42,12 +42,15 @@ with picamera.PiCamera() as camera :
     while not((datetime.now().time().hour == startHour) and (datetime.now().time().minute == startMinute)):
         print ("wait "+str(datetime.now().time()))
         time.sleep(30)
-    os.system("mkdir /home/pi/SUNCNIM/"+time.strftime("%d-%m-%Y"))
+    os.system("mkdir /home/pi/Desktop/eLLO-SUNCNIM/gather_photos/test."+time.strftime("%d-%m-%Y"))
     print("Folder Created")
     #while time is different of finish time take photos
     while not((datetime.now().time().hour == finishHour) and (datetime.now().time().minute == finishMinute)):
-        camera.capture_sequence(["/home/pi/SUNCNIM/"+time.strftime("%d-%m-%Y")+"/"+"img"+time.strftime("%H:%M:%S")+".jpg"])
-        DxF,DyF,DzF = Accel.gatherDistance()
+        camera.capture_sequence(["/home/pi/Desktop/eLLO-SUNCNIM/gather_photos/test."+time.strftime("%d-%m-%Y")+"/"+"img"+time.strftime("%H:%M:%S")+".jpg"])
+        
+        _, _, _ ,ms= Accel.auto_calibration()
+        DxF,DyF,DzF = Accel.gatherDistance(ms)
+        Lat,long= gps.getGPSvalue()
         #time.sleep(2) #wait 2 sec
         print ("picture")
     print('End')
