@@ -20,8 +20,6 @@ planSite ="GPS/Prototype vue de Haut.jpg"
 #*************************************************************************
 def main():
     
-    crackedMiror = detection.detectcrack()
-    print("list of name for all image which has cracks \n",crackedMiror) 
     realCoordinate = (30,10)
     siteMap = pinMap(planSite)
     
