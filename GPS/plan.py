@@ -1,34 +1,30 @@
 import numpy as np
 import cv2
 mirorRect = {'width' : 14, 'height' : 86}
-heightSite = 18.55 # largeur site =  18,55 m
-widthSite = 53.35 # longeur site = 53,348 m
+heightSiteInMeters = 18.55 # largeur site =  18,55 m
+widthSiteInMeters = 53.35 # longeur site = 53,348 m
 
 
 class pinMap():
     def __init__(self, sitePlanPath):
         self.image = cv2.imread(sitePlanPath)
-        self.imageFilter = self.filter()
-        
-        
+        self.imageFilter = self.Filter(self.image)
+        self.newOrigin = self.origin()     
 
-    def brokenMirrors(self,realCoordinate):
-
-        self.realCoordinate = realCoordinate
-        self.Caissons = self.listOfCaisson()
-        self.newOrigin = self.origin()
-        self.coordinateInPixel = self.convertRealCoordinateToPixel()
-        self.ancientCoordinate = self.ancientPointCoordinate()
-        self.nearestCaisson = self.findCaisson()
-        self.image = self.colorCaisson()
+    def brokenMirrors(self,realCoordinate):      
+        
+        coordinateInPixel = self.convertRealCoordinateToPixel(realCoordinate)
+        ancientCoordinate = self.ancientPointCoordinate(coordinateInPixel)
+        nearestCaisson = self.findCaisson(self.imageFilter,ancientCoordinate)
+        self.image = self.colorCaisson(self.image,nearestCaisson)
        
         return self.image
         
-    def filter(self):
+    def Filter(self, image):
 
-        plan = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
+        plan = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         rows, cols = plan.shape[:2]
-        print("Image Dimensions : " +str([rows, cols]))
+        #print("Image Dimensions : " +str([rows, cols]))
         mean = plan.mean()
         _,thresh = cv2.threshold(plan, mean-50, 255,  cv2.THRESH_BINARY)
         
@@ -49,9 +45,9 @@ class pinMap():
         return masked_image
 
     
-    def listOfCaisson (self):
+    def listOfCaisson (self, image):
 
-        _,contours,_ = cv2.findContours(self.imageFilter, 1, 2)
+        _,contours,_ = cv2.findContours(image, 1, 2)
         Caissons = []
         # Find all caisson
         for contour in contours :
@@ -63,53 +59,55 @@ class pinMap():
     def origin(self):
         _,contours,_ = cv2.findContours(self.imageFilter, 1, 2)
         rect = cv2.minAreaRect(contours[7])
-        print("rect =",rect)
-        newOrigin = (int(rect[0][0]-rect[1][0]/2),int(rect[0][1]+rect[1][1]/2))
+        newOrigin = (int(rect[0][0] - rect[1][1]/2),int(rect[0][1] + rect[1][0]/2))
         return newOrigin
 
-    def convertRealCoordinateToPixel(self):
-        x = 61
-        y = 579
-        coordinatepointOrig = (x, y) 
-        coordinatepoint1 = (769, y)
-        coordinatepoint2 = (x,335)
+    def convertRealCoordinateToPixel(self, realCoordinate):
+       
+        coordinatepoint1 = (769, self.newOrigin[1])
+        coordinatepoint2 = (self.newOrigin[0],335)
+        siteWidthInPixels = (coordinatepoint1[0]-self.newOrigin[0])
+        siteHeightInPixels = (self.newOrigin[1]-coordinatepoint2[1])
 
-        coordinateInPixelX = (self.realCoordinate[0]*(coordinatepoint1[0]-x))/widthSite
-        coordinateInPixelY = (self.realCoordinate[1]*(y-coordinatepoint2[1]))/heightSite
-        coordinateInPixel = (coordinateInPixelX,coordinateInPixelY)
-        return coordinateInPixel
+        coordinateInPixelX = (realCoordinate[0]*siteWidthInPixels)/widthSiteInMeters
+        coordinateInPixelY = (realCoordinate[1]*siteHeightInPixels)/heightSiteInMeters
+        
+        return int(coordinateInPixelX),int(coordinateInPixelY)
+        
 
-    def ancientPointCoordinate(self):
+    def ancientPointCoordinate(self, coordinateInPixel ):
 
-        ancientCoordinatePointX= self.coordinateInPixel[0]+self.newOrigin[0]
-        ancientCoordinatePointY= self.coordinateInPixel[1]+self.newOrigin[1]
-        ancientCoordinate = (ancientCoordinatePointX,ancientCoordinatePointY)
-        return ancientCoordinate
+        ancientCoordinatePointX = coordinateInPixel[0] + self.newOrigin[0]
+        ancientCoordinatePointY = -coordinateInPixel[1] + self.newOrigin[1]
+        return ancientCoordinatePointX,ancientCoordinatePointY
 
-    def findCaisson(self):
+
+    def findCaisson(self, image, coordinate):
         
         ShortestDistanceToCaisson = -1000
         nearestCaisson = 0
-        for caisson in self.Caissons:
-            distance = cv2.pointPolygonTest(caisson,self.ancientCoordinate,True)             #it returns +distance if the point is inside the contour
+        Caissons = self.listOfCaisson(image)
+        
+        for caisson in Caissons:
+            distance = cv2.pointPolygonTest(caisson, coordinate,True)             #it returns +distance if the point is inside the contour
                                                                                  #it returns -distance if the point is outside the contour
                                                                                 #it returns 0 if the point is on the contour  
             if  (distance >= 0) :
-                print("point is inside the contour",caisson)
+                #print("point is inside the contour",caisson)
                 nearestCaisson = caisson
                 return nearestCaisson
             else:
                 if (abs(distance) < abs(ShortestDistanceToCaisson)):
                     ShortestDistanceToCaisson = distance
                     nearestCaisson = caisson
-                    print("point is near to the contour",nearestCaisson)
+        #print("point is near to the contour",nearestCaisson)
         return nearestCaisson
 
 
     
-    def colorCaisson(self):
+    def colorCaisson(self, image,nearestCaisson):
 
         
-        cv2.drawContours(self.image,[self.nearestCaisson], 0,(0,0,255),-1) # for filling inside a specific contour
+        cv2.drawContours(image,[nearestCaisson], 0,(0,0,255),-1) # for filling inside a specific contour
         
-        return self.image
+        return image
