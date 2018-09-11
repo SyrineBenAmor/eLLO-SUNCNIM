@@ -138,23 +138,23 @@ def gatherDistance(ms):
 
             Aiz = Az                                 
             Viz = Vz
-                    
+            total_axes = math.sqrt(  Aix**2 +Aiy**2+Aiz**2)      
             # STEP06: get the maximun value in the three axis
             if VxF < abs(Vx):
                 AxF = abs(Ax)
                 VxF = abs(Vx)
-                DxF = DxF + Dx
-
+                DxF = abs(DxF + Dx)
+                angleX = round(math.asin(AxF/total_axes )*180.0/3.14)
             if VyF < abs(Vy):
                 AyF = abs(Ay)
                 VyF = abs(Vy)
-                DyF = DyF +(Dy)
-
+                DyF = abs(DyF +Dy)
+                angleY = round(math.asin(AxF/total_axes )*180.0/3.14)
             if VzF < abs(Vz):
                 AzF = abs(Az)
                 VzF = abs(Vz)
-                DzF = DzF +(Dz)
-                    
+                DzF = abs(DzF +Dz)
+                angleZ = round(math.asin(AxF/total_axes )*180.0/3.14)    
                     
 
             # logging result
@@ -162,10 +162,15 @@ def gatherDistance(ms):
             print('Acceleration [mm/s^2] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(AxF, AyF, AzF))
             print('Velocity [mm/s] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(VxF, VyF, VzF))
             print('Distance [mm] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(DxF, DyF, DzF))
+            print('angle (°) : | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(angleX, angleY, angleZ))
             print("\n")
             file = open("Distance.txt","a+")
             file.write("{},{},{},{}\n".format(time.time(),DxF,DyF,DzF))
+    
             file.close()
+            file1 = open("Angle.txt","a+")
+            file1.write("{},{},{},{}\n".format(time.time(),angleX,angleY,angleZ))
+            file1.close()
             return(DxF, DyF, DzF)    
             # initialize transport time and final meassures
             ti = time.time()
