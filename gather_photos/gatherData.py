@@ -5,9 +5,9 @@ from datetime import datetime, timedelta
 import os
 
 
-startHour   = 14
-startMinute = 6
-finishHour  = 14
+startHour   = 15
+startMinute = 25
+finishHour  = 15
 finishMinute = 59
 
 
@@ -46,6 +46,7 @@ with picamera.PiCamera() as camera :
     print("Folder Created")
     #while time is different of finish time take photos
     while not((datetime.now().time().hour == finishHour) and (datetime.now().time().minute == finishMinute)):
+        print ("time pour prendre une photo",datetime.now().time())
         camera.capture_sequence(["/home/pi/Desktop/eLLO-SUNCNIM/gather_photos/test."+time.strftime("%d-%m-%Y")+"/"+"img"+time.strftime("%H:%M:%S")+".jpg"])
         
         _, _, _ ,ms= Accel.auto_calibration()
