@@ -11,7 +11,7 @@ def getGPSvalue():
     print(lat,long)
     file = open("GPSvalue.txt","a+")
     file.write("{},{},{}\n".format(time.time(),lat,long))
-    time.sleep(1)
+    #time.sleep(1)
         
     file.close()
     return (lat,long)
