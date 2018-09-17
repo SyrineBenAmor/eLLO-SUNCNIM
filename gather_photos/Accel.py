@@ -14,7 +14,7 @@ SAMPLE_CALIBRATION = 1024 # number of sampples
 SAMPLE_FILTERING = 100 # rolling mean samples number
 WINDOW_FILTERING = 20 # rolling mean window
 #T = 0.2  # seconds. Sample rate (5 Hz)
-T = 0.2  # seconds. Sample rate (50 Hz)
+T = 0.002  # seconds. Sample rate (50 Hz)
 #T = 0.002  # seconds. Sample rate (500 Hz)
 R = 1 # sample transport rate in minutes
 
