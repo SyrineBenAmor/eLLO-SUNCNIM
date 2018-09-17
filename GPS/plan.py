@@ -1,5 +1,8 @@
 import numpy as np
 import cv2
+import math
+
+
 mirorRect = {'width' : 14, 'height' : 86}
 heightSiteInMeters = 18.55 # largeur site =  18,55 m
 widthSiteInMeters = 53.35 # longeur site = 53,348 m
@@ -114,3 +117,28 @@ class pinMap():
         cv2.drawContours(image,[nearestCaisson], 0,(0,0,255),-1) # for filling inside a specific contour
         
         return image
+
+    def convertLatitudeLongitudeToMeters(self):
+        R = 6372  #approximate radius of earth in Km
+        lat = 43.11672166666667
+        lon = 5.882429999999999
+
+        
+        dlon = math.radians(lon - LonOrigin)
+        dlat = math.radians(lat - LatOrigin)
+
+        a = math.sin(dlat /2)**2 + math.cos(math.radians(LatOrigin)) * math.cos(math.radians(lat)) * math.sin(dlon/2)**2
+        c = 2 * math.atan2(math.sqrt(a),math.sqrt(1-a))
+
+        distance = R * c #distance en Km
+        print("distance [m] = ",distance*1000)
+
+        dx = (lon-LonOrigin)* 40000*math.cos((LatOrigin+lat)*math.pi/360)/360
+        dy = (LatOrigin - lat)*40000/360
+        print("x [m], y [m]=" ,abs(dx*1000), abs(dy*1000))
+
+        return (distance*1000) #ditance en m
+
+        
+        
+        
