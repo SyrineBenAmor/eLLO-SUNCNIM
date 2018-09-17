@@ -164,13 +164,9 @@ def gatherDistance(ms):
             print('Distance [mm] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(DxF, DyF, DzF))
             print('angle (°) : | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(angleX, angleY, angleZ))
             print("\n")
-            file = open("Distance.txt","a+")
-            file.write("{},{},{},{}\n".format(time.time(),DxF,DyF,DzF))
-    
+            file = open(time.strftime("%d-%m-%Y")+"Data.txt","a+")
+            file.write("{},{};{};{},{};{};{},{};{};{}\n".format(int(time.time()),angleX,angleY,angleZ,DxF,DyF,DzF,AxF,AyF,AzF))
             file.close()
-            file1 = open("Angle.txt","a+")
-            file1.write("{},{},{},{}\n".format(time.time(),angleX,angleY,angleZ))
-            file1.close()
             return(DxF, DyF, DzF)    
             # initialize transport time and final meassures
             ti = time.time()
@@ -181,8 +177,11 @@ def gatherDistance(ms):
             VxF=0
             VyF=0
             VzF=0
-                
-
+            '''
+            DxF=0
+            DyF=0
+            DzF=0
+            '''
             # next data (T sample rate) 
-            time.sleep(T)
+            #time.sleep(T)
         
