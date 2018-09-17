@@ -12,6 +12,7 @@ class pinMap():
         self.image = cv2.imread(sitePlanPath)
         self.imageFilter = self.Filter(self.image)
         self.newOrigin = self.origin()     
+        self.Distance = self.convertLatitudeLongitudeToMeters()
 
     def brokenMirrors(self,realCoordinate):      
         
