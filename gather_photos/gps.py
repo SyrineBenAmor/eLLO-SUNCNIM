@@ -9,9 +9,9 @@ def getGPSvalue():
     lat = data.get("latitude")
     long = data.get("longitude")
     print(lat,long)
-    file = open("GPSvalue.txt","a+")
-    file.write("{},{},{}\n".format(time.time(),lat,long))
-    #time.sleep(1)
+    file = open(time.strftime("%d-%m-%Y")+"Data.txt","a+")
+    file.write("{} {}\n".format(lat,long))
+    
         
     file.close()
     return (lat,long)
