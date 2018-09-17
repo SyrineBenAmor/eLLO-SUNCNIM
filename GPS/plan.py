@@ -9,14 +9,12 @@ widthSiteInMeters = 53.35 # longeur site = 53,348 m
 LatOrigin = 43.11655333333333 #latitude of the initial position of the robot in the prototype site
 LonOrigin = 5.882485000000001 #longitude of the initial position of the robot in the prototype site
 
-
 class pinMap():
     def __init__(self, sitePlanPath):
         self.image = cv2.imread(sitePlanPath)
         self.imageFilter = self.Filter(self.image)
         self.newOrigin = self.origin()     
         self.Distance = self.convertLatitudeLongitudeToMeters()
-
     def brokenMirrors(self,realCoordinate):      
         
         coordinateInPixel = self.convertRealCoordinateToPixel(realCoordinate)
