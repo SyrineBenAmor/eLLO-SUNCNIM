@@ -3,6 +3,8 @@ import cv2
 mirorRect = {'width' : 14, 'height' : 86}
 heightSiteInMeters = 18.55 # largeur site =  18,55 m
 widthSiteInMeters = 53.35 # longeur site = 53,348 m
+LatOrigin = 43.11655333333333 #latitude of the initial position of the robot in the prototype site
+LonOrigin = 5.882485000000001 #longitude of the initial position of the robot in the prototype site
 
 
 class pinMap():
