@@ -20,7 +20,7 @@ planSite ="GPS/Prototype vue de Haut.jpg"
 #*************************************************************************
 def main():
     
-    realCoordinate = (4.46,18.7)
+    realCoordinate = (1.66,1.5)
     siteMap = pinMap(planSite)
     
     image = siteMap.brokenMirrors(realCoordinate)
