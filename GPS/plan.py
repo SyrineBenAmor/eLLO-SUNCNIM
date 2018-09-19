@@ -118,8 +118,8 @@ class pinMap():
 
     def convertLatitudeLongitudeToMeters(self):
         R = 6372  #approximate radius of earth in Km
-        lat = 43.11672166666667
-        lon = 5.882429999999999
+        lat = 43.11655333333333
+        lon = 5.882485000000001
 
         
         dlon = math.radians(lon - LonOrigin)
