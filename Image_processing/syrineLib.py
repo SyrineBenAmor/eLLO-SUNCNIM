@@ -46,6 +46,8 @@ def threshold(img, threshType):
 
 def show(label, img):
     cv2.imshow(label, img)
+def saveImage(path,img):
+    cv2.imwrite(path,img)
 
 def processImage(gray, contrast, thresh):
     outContrast = contrast.copy()
