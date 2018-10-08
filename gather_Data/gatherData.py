@@ -45,9 +45,9 @@ def main(startHour,startMinute,finishHour,finishMinute):
         while not((datetime.now().time().hour == startHour) and (datetime.now().time().minute == startMinute)):
             print ("wait "+str(datetime.now().time()))
             time.sleep(30)
-        DataFile = "data/"+time.strftime("%d-%m-%Y")+".txt"     
+        dataFile = "data/"+time.strftime("%d-%m-%Y")+".txt"     
         os.system("mkdir photos/"+time.strftime("%d-%m-%Y")) #create folder of image with every day date
-        file = open(DataFile,"a+")
+        file = open(dataFile,"a+")
         file.write("Time(s),AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2], AngleX(°); AngleY(°);AngleZ(°), DistanceX[mm];DistanceY[mm];DistanceZ[mm], Latitude ;Longitude\n")
         file.close()
 
@@ -59,7 +59,7 @@ def main(startHour,startMinute,finishHour,finishMinute):
             
             AxF, AyF, AzF,angleX,angleY,angleZ,DxF, DyF, DzF = Accel.gatherDistance(ms)
             Lat,long= gps.getGPSvalue()
-            file = open(DataFile,"a+")
+            file = open(dataFile,"a+")
             file.write("{},{};{};{},{};{};{},{};{};{};{};{}\n".format(int(time.time()),AxF,AyF,AzF,angleX,angleY,angleZ,DxF,DyF,DzF,lat,long))
             file.close() 
             
