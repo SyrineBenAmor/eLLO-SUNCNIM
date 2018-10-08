@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import syrineLib as syrine
 
 global path
-path = "gather_photos/data/test.+"time.strftime("%d-%m-%Y")"/*.jpg"
+path = "gather_photos/photos/"time.strftime("%d-%m-%Y")"/*.jpg"
 #**********************************************************
 
 
@@ -45,11 +45,11 @@ def detectcrack():#replace with def deteccrack(path):
                 syrine.saveImage(folderSeparation +'/' + imagePath,outContrast)
             else :#it's caisson image
                 syrine.show('rectangle '+str(i),outContrastBis) 
-                syrine.saveImage(folderSeparation +'/' + imagePath,outContrastBis)
+                syrine.saveImage(folderCaisson +'/' + imagePath,outContrastBis)
         elif state == 'fissure' :#fissure
             syrine.show('rectangle '+str(i),outContrast)
-            syrine.saveImage(folderSeparation +'/' + imagePath,outContrast)
+            syrine.saveImage(folderFissure +'/' + imagePath,outContrast)
         elif state == 'caisson' : 
-            syrine.saveImage(folderSeparation +'/' + imagePath,outContrast)
+            syrine.saveImage(folderCaisson +'/' + imagePath,outContrast)
 
 
