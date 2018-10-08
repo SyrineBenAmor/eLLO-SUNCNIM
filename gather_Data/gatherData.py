@@ -45,8 +45,9 @@ def main(startHour,startMinute,finishHour,finishMinute):
         while not((datetime.now().time().hour == startHour) and (datetime.now().time().minute == startMinute)):
             print ("wait "+str(datetime.now().time()))
             time.sleep(30)
-        dataFile = "data/"+time.strftime("%d-%m-%Y")+".txt"     
-        os.system("mkdir photos/"+time.strftime("%d-%m-%Y")) #create folder of image with every day date
+        dataFile = "data/"+time.strftime("%d-%m-%Y")+".txt"  #variable for data file with every day date
+        photosFolder = "photos/"+time.strftime("%d-%m-%Y")   
+        os.system("mkdir photosFolder" ) #create folder of image with every day date
         file = open(dataFile,"a+")
         file.write("Time(s),AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2], AngleX(°); AngleY(°);AngleZ(°), DistanceX[mm];DistanceY[mm];DistanceZ[mm], Latitude ;Longitude\n")
         file.close()
@@ -54,7 +55,7 @@ def main(startHour,startMinute,finishHour,finishMinute):
         #while time is different of finish time take photos
         while not((datetime.now().time().hour == finishHour) and (datetime.now().time().minute == finishMinute)):
             
-            camera.capture_sequence(["test."+time.strftime("%d-%m-%Y")+"/"+"img."+time.strftime("%H:%M:%S")+".jpg"])
+            camera.capture_sequence([photosFolder+time.strftime("%H:%M:%S")+".jpg"])
             print ("picture")
             
             AxF, AyF, AzF,angleX,angleY,angleZ,DxF, DyF, DzF = Accel.gatherDistance(ms)
