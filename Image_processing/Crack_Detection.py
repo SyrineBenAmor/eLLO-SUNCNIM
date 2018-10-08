@@ -7,15 +7,26 @@ import matplotlib.pyplot as plt
 import syrineLib as syrine
 
 global path
-path = "crack.jpg"
-crackedMiror = []
+path = "gather_photos/data/test.+"time.strftime("%d-%m-%Y")"/*.jpg"
 #**********************************************************
 
 
-def detectcrack():
+def detectcrack():#replace with def deteccrack(path):
     i=0
+    #create new folder every day which name is the date into image_processing_output folder 
+    newFolderEveryDay = "image_processing_output/"+time.strftime("%d-%m-%Y")
+    os.system("mkdir "+ newFolderEveryDay)
+    #create 3 folders for caisson ,separation and fissure
+    folderCaisson    =  newFolderEveryDay+"/caisson"
+    folderSeparation =  newFolderEveryDay+"/separation"
+    folderFissure    =  newFolderEveryDay+"/fissure"
+    os.system("mkdir " + folderCaisson)
+    os.system("mkdir " + folderSeparation)
+    os.system("mkdir " + folderFissure)
+    #************************************************
     for imagePath in glob.glob(path):
         i+=1
+        imagePath = imagePath.split("/")[-1] # take the latest element as name of the image
         gray = syrine.loadImage(imagePath)  #Load a single imge  
         mean = int(gray.mean())    
         #print("mean = " ,str(mean))
@@ -29,13 +40,16 @@ def detectcrack():
         if state == "separation" :
             thresh = syrine.threshold(gray,"binary")
             outContrastBis,state = syrine.processImage(gray, contrast, thresh)
-            if state != "caisson" :
+            if state != "caisson" : #it's a separation image
                 syrine.show('rectangle '+str(i),outContrast)
-            else :
-                syrine.show('rectangle '+str(i),outContrastBis)
-        else :
+                syrine.saveImage(folderSeparation +'/' + imagePath,outContrast)
+            else :#it's caisson image
+                syrine.show('rectangle '+str(i),outContrastBis) 
+                syrine.saveImage(folderSeparation +'/' + imagePath,outContrastBis)
+        elif state == 'fissure' :#fissure
             syrine.show('rectangle '+str(i),outContrast)
-            crackedMiror.append(imagePath)
-            
-        return (crackedMiror)
+            syrine.saveImage(folderSeparation +'/' + imagePath,outContrast)
+        elif state == 'caisson' : 
+            syrine.saveImage(folderSeparation +'/' + imagePath,outContrast)
+
 
