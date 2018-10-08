@@ -7,34 +7,37 @@
 import glob
 import cv2
 import time
-path = "Image_processing/image_processing_output/folderFissure/*.jpg"
-nameDatafile = "17-09-2018Data.txt"
-#**************** transform name's image to time in sec*******************
+pathImage = "gather_Data/photos/test.08-10-2018/*.jpg"
+nameDatafile = "gather_Data/data/08-10-2018Data.txt"
+i =0
 
-for imagePath in glob.glob(path):
-    i+=1
-    print(imagePath)
-    imagePath = imagePath.split('.')
-    temps  = imagePath.remove(".jpg")
-    print(temps)
+def transformTimeToSec (time): #(%H:%M:%S)
+    h,m,s = time.split(":")
+    time_in_sec = int(h) * 3600 + int(m) * 60 +int(s)
+    return (time_in_sec)
+def time_data_transform(n):
+    divide_Time = time.localtime(n)
+    hour  = time.localtime(n)[3]
+    minute = time.localtime(n)[4]
+    sec = time.localtime(n)[5]
+    return hour,minute,sec
+
+def comparaisonBetweenImageTimeAndDataTime(nameDatafile,pathImage):
+    for imagePath in glob.glob(path):
+        i+=1
     
-#******************Open data file to compare time with name image****************
-ma_liste=[]
-fichier = open(nameDatafile)
+        image_time = imagePath.split('.')[-2]
+        image_time_hour = image_time.split(':')[0]
+        image_time_minute = image_time.split(':')[1]
+        image_time_sec = image_time.split(':')[2]
+    
  
-for ligne in fichier:
-    a=ligne.replace(",","")
-    b=a.split()
-    for i in range(len(b)):
-        c=b[i]
-        d=ma_liste.append(c)
-print(d)
+    fichier = open(nameDatafile,'r') 
 
- 
-fichier.close()
-#****************afficher les données correspondantes*********************
-
-k = cv2.waitKey(0)
-if k == 27: #wait for ESC key to exit
-    cv2.destroyAllWindows()
-print ('end')
+    for ligne in fichier:
+        time_data=ligne.split(":")[0]
+        hour,minute,sec =time_data_transform(time_data)
+        if(hour=image_time_hour and minute=image_time_minute and sec=image_time_sec):
+            print(ligne)
+        
+    fichier.close()
