@@ -8,15 +8,16 @@ import os
 import syrineLib as syrine
 
 global path
-path = "gather_photos/photos/"time.strftime("%d-%m-%Y")"/*.jpg"
+print(os.system("ls gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/"))
+path = "gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/"+"*.jpg"
 #**********************************************************
 
 
 def detectcrack():#replace with def deteccrack(path):
     i=0
     #create new folder every day which name is the date into image_processing_output folder 
-    newFolderEveryDay = "image_processing_output/"+time.strftime("%d-%m-%Y")
-    os.system("mkdir "+ newFolderEveryDay)
+    newFolderEveryDay = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")
+    os.system("mkdir " + newFolderEveryDay)
     #create 3 folders for caisson ,separation and fissure
     folderCaisson    =  newFolderEveryDay+"/caisson"
     folderSeparation =  newFolderEveryDay+"/separation"
@@ -25,6 +26,7 @@ def detectcrack():#replace with def deteccrack(path):
     os.system("mkdir " + folderSeparation)
     os.system("mkdir " + folderFissure)
     #************************************************
+    
     for imagePath in glob.glob(path):
         i+=1
         imageName = imagePath.split("/")[-1] # take the latest element as name of the image
