@@ -26,7 +26,7 @@ def detectcrack():#replace with def deteccrack(path):
     #************************************************
     for imagePath in glob.glob(path):
         i+=1
-        imagePath = imagePath.split("/")[-1] # take the latest element as name of the image
+        imageName = imagePath.split("/")[-1] # take the latest element as name of the image
         gray = syrine.loadImage(imagePath)  #Load a single imge  
         mean = int(gray.mean())    
         #print("mean = " ,str(mean))
