@@ -5,14 +5,12 @@ from datetime import datetime, timedelta
 import os
 import sys
 
-sys.path.append('Accelero/')
-import Accel
-sys.path.append('GPS/')
-import gps
+import Accelero.Accel as accel
+import GPS.gps as gps
 
-startHour   = 16
-startMinute = 49
-finishHour  = 16
+startHour   = 10 
+startMinute = 17
+finishHour  = 10
 finishMinute = 59
 
 def main(startHour,startMinute,finishHour,finishMinute):
@@ -36,7 +34,7 @@ def main(startHour,startMinute,finishHour,finishMinute):
         camera.awb_gains = g
         #wait 1sec
         time.sleep(0.5)
-        _, _, _ ,ms= Accel.auto_calibration()
+        _, _, _ ,ms= accel.auto_calibration()
     #***********take photos*****************************
 
 
@@ -45,23 +43,23 @@ def main(startHour,startMinute,finishHour,finishMinute):
         while not((datetime.now().time().hour == startHour) and (datetime.now().time().minute == startMinute)):
             print ("wait "+str(datetime.now().time()))
             time.sleep(30)
-        dataFile = "data/"+time.strftime("%d-%m-%Y")+".txt"  #variable for data file with every day date
-        photosFolder = "photos/"+time.strftime("%d-%m-%Y")   
-        os.system("mkdir photosFolder" ) #create folder of image with every day date
+        dataFile = "gather_Data/data/"+time.strftime("%d-%m-%y")+".txt"  #variable for data file with every day date
+        photosFolder = "gather_Data/photos/"+time.strftime("%d-%m-%y")   
+        os.system("mkdir gather_Data/photos/"+time.strftime("%d-%m-%y") ) #create folder of image with every day date
         file = open(dataFile,"a+")
-        file.write("Time(s),AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2], AngleX(°); AngleY(°);AngleZ(°), DistanceX[mm];DistanceY[mm];DistanceZ[mm], Latitude ;Longitude\n")
+        file.write("Time(s),AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2], AngleX(deg); AngleY(deg);AngleZ(deg), DistanceX[mm];DistanceY[mm];DistanceZ[mm], Latitude ;Longitude\n")
         file.close()
 
         #while time is different of finish time take photos
         while not((datetime.now().time().hour == finishHour) and (datetime.now().time().minute == finishMinute)):
             
-            camera.capture_sequence([photosFolder+time.strftime("%H:%M:%S")+".jpg"])
+            camera.capture_sequence([photosFolder+"/"+time.strftime("%H:%M:%S")+".jpg"])
             print ("picture")
             
-            AxF, AyF, AzF,angleX,angleY,angleZ,DxF, DyF, DzF = Accel.gatherDistance(ms)
-            Lat,long= gps.getGPSvalue()
+            AxF, AyF, AzF,angleX,angleY,angleZ,DxF, DyF, DzF = accel.gatherDistance(ms)
+            #Latitude,Longitude= gps.getGPSvalue()
             file = open(dataFile,"a+")
-            file.write("{},{};{};{},{};{};{},{};{};{};{};{}\n".format(int(time.time()),AxF,AyF,AzF,angleX,angleY,angleZ,DxF,DyF,DzF,lat,long))
+            file.write("{},{};{};{},{};{};{},{};{};{}\n".format(int(time.time()),AxF,AyF,AzF,angleX,angleY,angleZ,DxF,DyF,DzF))
             file.close() 
             
         print('End')
