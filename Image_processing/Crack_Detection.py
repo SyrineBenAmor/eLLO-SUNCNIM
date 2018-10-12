@@ -43,14 +43,14 @@ def detectcrack():#replace with def deteccrack(path):
             outContrastBis,state = syrine.processImage(gray, contrast, thresh)
             if state != "caisson" : #it's a separation image
                 syrine.show('rectangle '+str(i),outContrast)
-                syrine.saveImage(folderSeparation +'/' + imagePath,outContrast)
+                syrine.saveImage(folderSeparation +"/" + imageName,outContrast)
             else :#it's caisson image
                 syrine.show('rectangle '+str(i),outContrastBis) 
-                syrine.saveImage(folderCaisson +'/' + imagePath,outContrastBis)
+                syrine.saveImage(folderCaisson +"/" + imageName,outContrastBis)
         elif state == 'fissure' :#fissure
             syrine.show('rectangle '+str(i),outContrast)
-            syrine.saveImage(folderFissure +'/' + imagePath,outContrast)
+            syrine.saveImage(folderFissure +"/" + imageName,outContrast)
         elif state == 'caisson' : 
-            syrine.saveImage(folderCaisson +'/' + imagePath,outContrast)
+            syrine.saveImage(folderCaisson +"/" + imageName,outContrast)
 
-
+    
