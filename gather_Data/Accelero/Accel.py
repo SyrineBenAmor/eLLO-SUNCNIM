@@ -3,7 +3,6 @@ import time
 import datetime
 import numpy
 import pandas
-import gps
 
 import math
 from microstacknode.hardware.accelerometer.mma8452q import MMA8452Q
@@ -162,7 +161,7 @@ def gatherDistance(ms):
             print('Acceleration [mm/s^2] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(AxF, AyF, AzF))
             print('Velocity [mm/s] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(VxF, VyF, VzF))
             print('Distance [mm] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(DxF, DyF, DzF))
-            print('angle (°) : | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(angleX, angleY, angleZ))
+            print('angle (deg) : | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(angleX, angleY, angleZ))
             print("\n")
             
             return(AxF, AyF, AzF,angleX,angleY,angleZ,DxF, DyF, DzF)    
