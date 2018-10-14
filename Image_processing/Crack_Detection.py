@@ -8,7 +8,7 @@ import os
 import syrineLib as syrine
 
 global path
-print(os.system("ls gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/"))
+
 path = "gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/"+"*.jpg"
 #**********************************************************
 
@@ -58,5 +58,4 @@ def detectcrack():#replace with def deteccrack(path):
             syrine.saveImage(folderFissure +"/" + imageName,outContrast)
         elif state == 'caisson' : 
             syrine.saveImage(folderCaisson +"/" + imageName,outContrast)
-
-    
+    print("Done")
