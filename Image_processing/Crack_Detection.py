@@ -17,14 +17,18 @@ def detectcrack():#replace with def deteccrack(path):
     i=0
     #create new folder every day which name is the date into image_processing_output folder 
     newFolderEveryDay = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")
-    os.system("mkdir " + newFolderEveryDay)
+    if not os.path.exists(newFolderEveryDay):
+        os.makedirs(newFolderEveryDay)
     #create 3 folders for caisson ,separation and fissure
     folderCaisson    =  newFolderEveryDay+"/caisson"
     folderSeparation =  newFolderEveryDay+"/separation"
     folderFissure    =  newFolderEveryDay+"/fissure"
-    os.system("mkdir " + folderCaisson)
-    os.system("mkdir " + folderSeparation)
-    os.system("mkdir " + folderFissure)
+    if not os.path.exists(folderCaisson):
+        os.makedirs(folderCaisson)
+    if not os.path.exists(folderSeparation):
+        os.makedirs(folderSeparation)
+    if not os.path.exists(folderFissure):
+        os.makedirs(folderFissure)
     #************************************************
     
     for imagePath in glob.glob(path):
