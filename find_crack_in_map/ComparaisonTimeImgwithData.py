@@ -33,10 +33,20 @@ def comparaisonBetweenImageTimeAndDataTime(nameDatafile,pathImage):
         fichier = open(nameDatafile,'r') 
 
         for ligne in fichier:
+            print(ligne)
             time_data=ligne.split(",")[0]
             hour,minute,sec =timeDataTransform(int(time_data))
             if hour==image_time_hour and minute==image_time_minute and sec==image_time_sec:
-                print("Hellor" ,ligne)
+                print("Hello" ,ligne)
             else: 
                 print("n existe pas")
         fichier.close()
+
+    k = cv2.waitKey(0)
+    if k == 27: #wait for ESC key to exit
+        cv2.destroyAllWindows()
+    print ('end')
+    
+if __name__== "__main__":
+    main()
+    
