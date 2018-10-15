@@ -137,25 +137,28 @@ def gatherDistance(ms):
 
             Aiz = Az                                 
             Viz = Vz
-            total_axes = math.sqrt(  Aix**2 +Aiy**2+Aiz**2)      
+                 
             # STEP06: get the maximun value in the three axis
             if VxF < abs(Vx):
                 AxF = abs(Ax)
                 VxF = abs(Vx)
                 DxF = abs(DxF + Dx)
-                angleX = round(math.asin(AxF/total_axes )*180.0/3.14)
+                
             if VyF < abs(Vy):
                 AyF = abs(Ay)
                 VyF = abs(Vy)
                 DyF = abs(DyF +Dy)
-                angleY = round(math.asin(AxF/total_axes )*180.0/3.14)
+               
             if VzF < abs(Vz):
                 AzF = abs(Az)
                 VzF = abs(Vz)
                 DzF = abs(DzF +Dz)
-                angleZ = round(math.asin(AxF/total_axes )*180.0/3.14)    
+                   
                     
-
+            total_axes = math.sqrt(AxF**2 +AyF**2+AzF**2) 
+            angleX = round(math.asin(AxF/total_axes )*180.0/3.14)
+            angleY = round(math.asin(AxF/total_axes )*180.0/3.14)
+            angleZ = round(math.asin(AxF/total_axes )*180.0/3.14) 
             # logging result
             print('----')
             print('Acceleration [mm/s^2] | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(AxF, AyF, AzF))
@@ -164,7 +167,7 @@ def gatherDistance(ms):
             print('angle (deg) : | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(angleX, angleY, angleZ))
             print("\n")
             
-            return(AxF, AyF, AzF,angleX,angleY,angleZ,DxF, DyF, DzF)    
+            return(AxF, AyF, AzF,total_axes,angleX,angleY,angleZ,DxF, DyF, DzF)    
             # initialize transport time and final meassures
             ti = time.time()
 
