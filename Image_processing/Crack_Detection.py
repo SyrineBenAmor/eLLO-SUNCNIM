@@ -41,7 +41,6 @@ def detectcrack():#replace with def deteccrack(path):
         mean = int(gray.mean())    
         #print("mean = " ,str(mean))
         thresh = syrine.threshold(gray,"triangle")     # binarization of the loaded image
-        syrine.show('Binarized Image '+str(i),thresh)
         alpha = 3.0
         beta= 0
         contrast = syrine.contrast(gray, alpha, beta)
@@ -51,14 +50,16 @@ def detectcrack():#replace with def deteccrack(path):
             thresh = syrine.threshold(gray,"binary")
             outContrastBis,state = syrine.processImage(gray, contrast, thresh)
             if state != "caisson" : #it's a separation image
-                syrine.show('rectangle '+str(i),outContrast)
+                #syrine.show('rectangle '+str(i),outContrast)
                 syrine.saveImage(folderSeparation +"/" + imageName,outContrast)
             else :#it's caisson image
-                syrine.show('rectangle '+str(i),outContrastBis) 
+                #syrine.show('rectangle '+str(i),outContrastBis) 
                 syrine.saveImage(folderCaisson +"/" + imageName,outContrastBis)
         elif state == 'fissure' :#fissure
-            syrine.show('rectangle '+str(i),outContrast)
+            #syrine.show('rectangle '+str(i),outContrast)
             syrine.saveImage(folderFissure +"/" + imageName,outContrast)
         elif state == 'caisson' : 
             syrine.saveImage(folderCaisson +"/" + imageName,outContrast)
+        else:
+            syrine.saveImage(folderOthers +"/" + imageName,outContrast) 
     print("Done")
