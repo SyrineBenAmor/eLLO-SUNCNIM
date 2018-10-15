@@ -44,10 +44,10 @@ def main(startHour,startMinute,finishHour,finishMinute):
             print ("wait "+str(datetime.now().time()))
             time.sleep(30)
         dataFile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"  #variable for data file with every day date
-        photosFolder = "gather_Data/photos/"+time.strftime("%d-%m-%Y")   
-        os.system("mkdir gather_Data/photos/"+time.strftime("%d-%m-%Y") ) #create folder of image with every day date
+        photosFolder = "gather_Data/photos/"+time.strftime("%d-%m-%Y")
+        os.system("mkdir gather_Data/photos/"+time.strftime("%d-%m-%Y") ) #create folder of image with every day date  
         file = open(dataFile,"a+")
-        file.write("Time(s),AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2], AngleX(deg); AngleY(deg);AngleZ(deg), DistanceX[mm];DistanceY[mm];DistanceZ[mm], Latitude ;Longitude\n")
+        file.write("Time,AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2],Total_axes acceleration, AngleX(deg); AngleY(deg);AngleZ(deg), DistanceX[mm];DistanceY[mm];DistanceZ[mm], Latitude ;Longitude\n")
         file.close()
 
         #while time is different of finish time take photos
