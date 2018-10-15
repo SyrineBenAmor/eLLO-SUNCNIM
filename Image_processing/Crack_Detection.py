@@ -23,12 +23,15 @@ def detectcrack():#replace with def deteccrack(path):
     folderCaisson    =  newFolderEveryDay+"/caisson"
     folderSeparation =  newFolderEveryDay+"/separation"
     folderFissure    =  newFolderEveryDay+"/fissure"
+    folderOthers     =  newFolderEveryDay+"/others"
     if not os.path.exists(folderCaisson):
         os.makedirs(folderCaisson)
     if not os.path.exists(folderSeparation):
         os.makedirs(folderSeparation)
     if not os.path.exists(folderFissure):
         os.makedirs(folderFissure)
+    if not os.path.exists(folderOthers):
+        os.makedirs(folderOthers)
     #************************************************
     
     for imagePath in glob.glob(path):
