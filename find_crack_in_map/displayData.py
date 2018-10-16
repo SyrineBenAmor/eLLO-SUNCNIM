@@ -22,7 +22,7 @@ def timeDataTransform(TimeInDataFile):
     sec = time.localtime(TimeInDataFile)[5]
     return hour,minute,sec
 
-def comparaisonBetweenImageTimeAndDataTime(nameDatafile,pathImage):
+def displayData(nameDatafile,pathImage):
     for imagePath in glob.glob(pathImage):
         i+=1
         image_time = imagePath.split('.')[-2]
