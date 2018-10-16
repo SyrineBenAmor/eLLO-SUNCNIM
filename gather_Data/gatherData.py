@@ -8,12 +8,8 @@ import sys
 import Accelero.Accel as accel
 import GPS.gps as gps
 
-startHour   = 10 
-startMinute = 17
-finishHour  = 10
-finishMinute = 59
 
-def main(startHour,startMinute,finishHour,finishMinute):
+def gatherData(startHour,startMinute,finishHour,finishMinute):
     with picamera.PiCamera() as camera :
     #************fix the values to take photos with same terms of brightness
         #choose resolutionof camera (camera type 2)
@@ -56,18 +52,10 @@ def main(startHour,startMinute,finishHour,finishMinute):
             camera.capture_sequence([photosFolder+"/"+time.strftime("%H:%M:%S")+".jpg"])
             print ("picture")
             
-            AxF, AyF, AzF,angleX,angleY,angleZ,DxF, DyF, DzF = accel.gatherDistance(ms)
+            AxF, AyF, AzF,total_axes,angleX,angleY,angleZ,DxF, DyF, DzF = accel.gatherDistance(ms)
             #Latitude,Longitude= gps.getGPSvalue()
             file = open(dataFile,"a+")
-            file.write("{},{};{};{},{};{};{},{};{};{}\n".format(int(time.time()),AxF,AyF,AzF,angleX,angleY,angleZ,DxF,DyF,DzF))
+            file.write("{},{};{};{},{},{};{};{},{};{};{}\n".format(time.strftime("%H:%M:%S"),AxF,AyF,AzF,total_axes,angleX,angleY,angleZ,DxF,DyF,DzF))
             file.close() 
             
         print('End')
-
-        k = cv2.waitKey(0)
-        if k == 27: #wait for ESC key to exit
-            cv2.destroyAllWindows()
-        print ('end')
-        
-if __name__== "__main__":
-    main(startHour,startMinute,finishHour,finishMinute)    
