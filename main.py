@@ -27,10 +27,18 @@ planSite ="find_crack_in_map/Prototype vue de Haut.jpg"
 
 pathImage = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")+"fissure/"+"*.jpg"
 nameDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
+
+startHour   = 10
+startMinute = 21
+finishHour  = 10
+finishMinute = 59
+
 #*************************************************************************
 def main():
-    detection.detectcrack()
-    location.comparaisonBetweenImageTimeAndDataTime(nameDatafile,pathImage)
+    #gatherData.gatherData(startHour,startMinute,finishHour,finishMinute)#gather data until Time cleaning finish
+    while not((datetime.now().time().hour > finishHour) and (datetime.now().time().minute > finishMinute)): #if time cleaning finish
+        detection.detectcrack()# treat image and stock them in other folder(caisson folder, fissure folder,ligne de separation folder)
+        location.displayData(nameDatafile,pathImage)#display acceleration, longitude and lattitude
     """
     realCoordinate = (7,1)
     siteMap = pinMap(planSite)
