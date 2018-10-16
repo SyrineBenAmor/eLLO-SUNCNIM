@@ -58,8 +58,8 @@ def detectcrack():#replace with def deteccrack(path):
         elif state == 'fissure' :#fissure
             #syrine.show('rectangle '+str(i),outContrast)
             syrine.saveImage(folderFissure +"/" + imageName,outContrast)
-        elif state == 'caisson' : 
+        elif state == 'caisson' : #caisson
             syrine.saveImage(folderCaisson +"/" + imageName,outContrast)
-        else:
+        else: #black image (without contours)
             syrine.saveImage(folderOthers +"/" + imageName,outContrast) 
     print("Done")
