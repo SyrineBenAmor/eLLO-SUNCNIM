@@ -14,14 +14,14 @@ class pinMap():
         self.image = cv2.imread(sitePlanPath)
         self.imageFilter = self.Filter(self.image)
         self.newOrigin = self.origin()     
-        self.Distance = self.convertLatitudeLongitudeToMeters()
-    def brokenMirrors(self,realCoordinate):      
         
+    def brokenMirrors(self,gpsCoordinate):      
+        realCoordinate = self.convertLatitudeLongitudeToMeters(gpsCoordinate)
         coordinateInPixel = self.convertRealCoordinateToPixel(realCoordinate)
         ancientCoordinate = self.ancientPointCoordinate(coordinateInPixel)
         nearestCaisson = self.findCaisson(self.imageFilter,ancientCoordinate)
         self.image = self.colorCaisson(self.image,nearestCaisson)
-       
+        
         return self.image
         
     def Filter(self, image):
@@ -116,7 +116,7 @@ class pinMap():
         
         return image
 
-    def convertLatitudeLongitudeToMeters(self):
+    def convertLatitudeLongitudeToMeters(self,gpsCoordinate):
         R = 6372  #approximate radius of earth in Km
         lat = 43.11655333333333
         lon = 5.882485000000001
@@ -131,11 +131,11 @@ class pinMap():
         distance = R * c #distance en Km
         print("distance [m] = ",distance*1000)
 
-        dx = (lon-LonOrigin)* 40000*math.cos((LatOrigin+lat)*math.pi/360)/360
-        dy = (LatOrigin - lat)*40000/360
+        dy = (lon-LonOrigin)* 40000*math.cos((LatOrigin+lat)*math.pi/360)/360
+        dx = (LatOrigin - lat)*40000/360
         print("x [m], y [m]=" ,abs(dx*1000), abs(dy*1000))
-
-        return (distance*1000) #ditance en m
+        realCoordinate = abs(dx*1000),abs(dy*1000)
+        return realCoordinate
 
         
         
