@@ -8,4 +8,11 @@ class fetchData():
         self.timeImageArray = self.timeImage()
         self.gpsDataArray = self.timeData()
 
+        def timeImage(self):
+        timeImageArray =[]
+        for imagePath in glob.glob(self.pathImage):
+            time_Image = imagePath.split("/")[-1]
+            time_Image = time_Image.split(".")[0]
+            timeImageArray.append(time_Image)
+        return timeImageArray
     
