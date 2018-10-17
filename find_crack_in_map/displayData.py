@@ -15,4 +15,18 @@ class fetchData():
             time_Image = time_Image.split(".")[0]
             timeImageArray.append(time_Image)
         return timeImageArray
+        
+    def timeData(self):
+        gpsDataArray = []
+        dataFile = open(self.pathDatafile,'r')
+        for line in dataFile:
+            time_data = line.split(",")[0]
+            for i in range(0,len(self.timeImageArray)):
+                if time_data == self.timeImageArray[i]:
+                    gpsData =line.split(",")[-1]
+                    gpsDataArray.append(gpsData)
+                else : 
+                    i=i+1            
+        dataFile.close()
+        return(gpsDataArray)
     
