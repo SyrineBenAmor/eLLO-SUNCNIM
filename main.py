@@ -25,8 +25,8 @@ import Crack_Detection as detection
 then = time.time()
 planSite ="find_crack_in_map/Prototype vue de Haut.jpg"
 
-pathImage = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")+"fissure/"+"*.jpg"
-nameDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
+pathImage = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")+"/fissure/*.jpg"
+pathDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
 
 startHour   = 10
 startMinute = 21
