@@ -55,7 +55,7 @@ def gatherData(startHour,startMinute,finishHour,finishMinute):
             AxF, AyF, AzF,total_axes,angleX,angleY,angleZ,DxF, DyF, DzF = accel.gatherDistance(ms)
             Latitude,Longitude= gps.getGPSvalue()
             file = open(dataFile,"a+")
-            file.write("{},{};{};{},{},{};{};{},{};{};{},{};{}\n".format(time.strftime("%H:%M:%S"),AxF,AyF,AzF,total_axes,angleX,angleY,angleZ,DxF,DyF,DzF,Latitude,Longitude))
+            file.write("{},{};{};{},{},{};{};{},{};{};{},{};{} \n".format(time.strftime("%H:%M:%S"),AxF,AyF,AzF,total_axes,angleX,angleY,angleZ,DxF,DyF,DzF,Latitude,Longitude))
             file.close() 
             
         print('End')
