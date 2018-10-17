@@ -1,5 +1,6 @@
 import glob
 import time
+import os
 
 class fetchData():
     def __init__(self,pathImage,pathDatafile):
@@ -8,14 +9,14 @@ class fetchData():
         self.timeImageArray = self.timeImage()
         self.gpsDataArray = self.timeData()
 
-        def timeImage(self):
+    def timeImage(self):
         timeImageArray =[]
         for imagePath in glob.glob(self.pathImage):
             time_Image = imagePath.split("/")[-1]
             time_Image = time_Image.split(".")[0]
             timeImageArray.append(time_Image)
         return timeImageArray
-        
+    
     def timeData(self):
         gpsDataArray = []
         dataFile = open(self.pathDatafile,'r')
@@ -30,3 +31,12 @@ class fetchData():
         dataFile.close()
         return(gpsDataArray)
     
+    def gpsDataCouple(self):
+        CoordinateGPS =[]
+        for i in range(0,len(self.gpsDataArray)):
+            self.gpsDataArray[i] = self.gpsDataArray[i].split(";")
+            coordinateXgps = self.gpsDataArray[i][0]
+            self.gpsDataArray[i][1]= self.gpsDataArray[i][1].split(" ")
+            coordinateYgps = self.gpsDataArray[i][1][0]
+            CoordinateGPS.append(tuple((coordinateXgps,coordinateYgps)))
+        return CoordinateGPS
