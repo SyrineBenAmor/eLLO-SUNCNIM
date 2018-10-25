@@ -43,8 +43,8 @@ def main():
     gpsDataArray = gpsDataOfcrackedMiror.gpsDataCouple() #stock gps data coordinate of all cracked miror in an array
     print(gpsDataArray)
     
-    siteMap = pinMap(planSite)
-    for i in range (0,len(gpsDataArray)):
+    siteMap = pinMap(planSite) #create instance of the class that recolor all damaged "caisson" coordinates using GPS coordinate sotcked in the array "gpsDataArray"
+    for i in range (0,len(gpsDataArray)): #
         print(gpsDataArray[i])
         image = siteMap.brokenMirrors(gpsDataArray[i])
     cv2.imshow("Image with red caisson ", image)
