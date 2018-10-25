@@ -29,10 +29,10 @@ planSite ="find_crack_in_map/Prototype vue de Haut.jpg"
 pathImage = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")+"/fissure/*.jpg"
 pathDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
 
-startHour   = 13
-startMinute = 13
-finishHour  = 13
-finishMinute = 14
+startHour   = 11
+startMinute = 44
+finishHour  = 11
+finishMinute = 45
 
 #*************************************************************************
 def main():
