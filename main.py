@@ -37,11 +37,10 @@ finishMinute = 45
 #*************************************************************************
 def main():
     
-    #gatherData.gatherData(startHour,startMinute,finishHour,finishMinute)#gather data until Time cleaning finish
-    #while not((datetime.now().time().hour > finishHour) and (datetime.now().time().minute > finishMinute)): #if time cleaning finish
-        #detection.detectcrack()# treat image and stock them in other folder(caisson folder, fissure folder,ligne de separation folder)
-    gpsDataOfcrackedMiror = fetchData(pathImage,pathDatafile)#display acceleration, longitude and lattitude
-    gpsDataArray = gpsDataOfcrackedMiror.gpsDataCouple()
+    gatherData.gatherData(startHour,startMinute,finishHour,finishMinute)#gather data until Time cleaning finish
+    detection.detectcrack()# treat image and stock them in other folder(caisson folder, fissure folder,ligne de separation folder)
+    gpsDataOfcrackedMiror = fetchData(pathImage,pathDatafile)#create instance of the class that display acceleration, longitude and lattitude
+    gpsDataArray = gpsDataOfcrackedMiror.gpsDataCouple() #stock gps data coordinate of all cracked miror in an array
     print(gpsDataArray)
     
     siteMap = pinMap(planSite)
