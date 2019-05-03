@@ -30,11 +30,11 @@ pathImage = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y"
 pathDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
 
 startHour   = 11
-startMinute = 44
+startMinute = 55
 finishHour  = 11
-finishMinute = 45
+finishMinute = 56
 
-#*************************************************************************
+#**************************************Principal program***********************************
 def main():
     
     gatherData.gatherData(startHour,startMinute,finishHour,finishMinute)#gather data until Time cleaning finish

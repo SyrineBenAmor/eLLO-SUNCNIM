@@ -8,5 +8,5 @@ def getGPSvalue():
     data = gps.get_gprmc()
     lat = data.get("latitude")
     long = data.get("longitude")
-    print(lat,long)
+    print("latitude,longitude",lat,long)
     return (lat,long)
