@@ -85,8 +85,4 @@ def gatherData(startHour,startMinute,finishHour,finishMinute):
             file.write("{},{};{};{},{},{};{};{},{};{};{},{};{} \n".format(time.strftime("%H:%M:%S"),AxF,AyF,AzF,total_axes,angleX,angleY,angleZ,DxF,DyF,DzF,Latitude,Longitude))
             file.close() 
                 
-        print('End')
-
-
-
-gatherData(10,28,0,0)
+    print('End')
