@@ -15,8 +15,8 @@ class pinMap():
         self.imageFilter = self.Filter(self.image)
         self.newOrigin = self.origin()     
         
-    def brokenMirrors(self,gpsCoordinate):      
-        realCoordinate = self.convertLatitudeLongitudeToMeters(gpsCoordinate)
+    def brokenMirrors(self,gpsCoordinate_x,gpsCoordinate_y):      
+        realCoordinate = self.convertLatitudeLongitudeToMeters(gpsCoordinate_x,gpsCoordinate_y)
         coordinateInPixel = self.convertRealCoordinateToPixel(realCoordinate)
         ancientCoordinate = self.ancientPointCoordinate(coordinateInPixel)
         nearestCaisson = self.findCaisson(self.imageFilter,ancientCoordinate)
@@ -86,25 +86,23 @@ class pinMap():
         return ancientCoordinatePointX,ancientCoordinatePointY
 
 
-    def findCaisson(self, image, coordinate):
-        
-        ShortestDistanceToCaisson = -1000
-        nearestCaisson = 0
+    def findCaisson(self, image, ancientCoordinate):
         Caissons = self.listOfCaisson(image)
-        
+
+        ShortestDistanceToCaisson = cv2.pointPolygonTest(Caissons[0], (ancientCoordinate[0],ancientCoordinate[1]),True)
+
         for caisson in Caissons:
-            distance = cv2.pointPolygonTest(caisson, coordinate,True)             #it returns +distance if the point is inside the contour
-                                                                                 #it returns -distance if the point is outside the contour
-                                                                                #it returns 0 if the point is on the contour  
-            if  (distance >= 0) :
-                #print("point is inside the contour",caisson)
+            distance = cv2.pointPolygonTest(caisson, (ancientCoordinate[0],ancientCoordinate[1]),True)       #if false      #it returns +distance if the point is inside the contour
+                                                                                                                #it returns -distance if the point is outside the contour
+                                                                                                                #it returns 0 if the point is on the contour  
+            if  (abs(distance) < abs(ShortestDistanceToCaisson)): 
                 nearestCaisson = caisson
+                #print("point is near to the contourXXX = ",nearestCaisson)
                 return nearestCaisson
             else:
-                if (abs(distance) < abs(ShortestDistanceToCaisson)):
-                    ShortestDistanceToCaisson = distance
-                    nearestCaisson = caisson
-        #print("point is near to the contour",nearestCaisson)
+                nearestCaisson = Caissons[0]
+        
+        #print("point is near to the contour = ",nearestCaisson)
         return nearestCaisson
 
 
@@ -116,10 +114,10 @@ class pinMap():
         
         return image
 
-    def convertLatitudeLongitudeToMeters(self,gpsCoordinate):
+    def convertLatitudeLongitudeToMeters(self,gpsCoordinate_x,gpsCoordinate_y):
         R = 6372  #approximate radius of earth in Km
-        lat = 43.11655333333333
-        lon = 5.882485000000001
+        lat = float(gpsCoordinate_x)
+        lon = float(gpsCoordinate_y)
 
         
         dlon = math.radians(lon - LonOrigin)
@@ -129,11 +127,11 @@ class pinMap():
         c = 2 * math.atan2(math.sqrt(a),math.sqrt(1-a))
 
         distance = R * c #distance en Km
-        print("distance [m] = ",distance*1000)
+        #print("distance [m] = ",distance*1000)
 
         dy = (lon-LonOrigin)* 40000*math.cos((LatOrigin+lat)*math.pi/360)/360
         dx = (LatOrigin - lat)*40000/360
-        print("x [m], y [m]=" ,abs(dx*1000), abs(dy*1000))
+        #print("x [m], y [m]=" ,abs(dx*1000), abs(dy*1000))
         realCoordinate = abs(dx*1000),abs(dy*1000)
         return realCoordinate
 
