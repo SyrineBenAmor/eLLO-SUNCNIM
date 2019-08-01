@@ -1,1 +1,0 @@
-Time,AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2],Total_axes acceleration, AngleX(deg); AngleY(deg);AngleZ(deg), DistanceX[mm];DistanceY[mm];DistanceZ[mm], Latitude ;Longitude

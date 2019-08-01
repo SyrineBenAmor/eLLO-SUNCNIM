@@ -1,4 +1,0 @@
-Time(s), AngleX(°); AngleY(°);AngleZ(°), DistanceX[mm];DistanceY[mm];DistanceZ[mm], AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2], Latitude Longitude
-1538145961,31;31;31,5.430598036448535e-06;3.5470346991216816e-06;8.301146068518506e-06,5.430598036448534;3.5470346991216815;8.301146068518506
-43.107079999999996 5.878396666666667
-Time(s), AngleX(°); AngleY(°);AngleZ(°), DistanceX[mm];DistanceY[mm];DistanceZ[mm], AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2], Latitude Longitude
