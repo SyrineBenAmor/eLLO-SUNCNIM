@@ -1,10 +1,12 @@
 import time
+from gpiozero import CPUTemperature
+import psutil
 import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
 
 
 Broker = "192.168.0.130"
-
+sub_topic_accel = "cpu/data"    # receive messages on this topic
 sub_topic_accel = "accel/instructions"    # receive messages on this topic
 sub_topic_lat = "latitude/instructions"    # receive messages on this topic
 sub_topic_lon = "longitude/instructions"    # receive messages on this topic
@@ -32,8 +34,16 @@ def read_acceleration():
     print("z=",accel_z)
     
     return accel_x,accel_y,accel_z
-
-
+############### read CPU temprature ############ 
+def cpu_data():
+    
+    cpu = CPUTemperature()
+    temperature = cpu.temperature
+    cpu_use = psutil.cpu_percent()
+    print("temperature cpu = ",temperature)
+    print("cpu usage percent = " , cpu_use)
+    return temperature,cpu_use
+    
 ############### MQTT section ##################
 
 # when connecting to mqtt do this;
@@ -64,6 +74,9 @@ client.loop_start()
 
 while True:
     accel_x,accel_y,accel_z= read_acceleration()
+    temperature, cpu_use = cpu_data()
+    client.publish("cpu/memory", str(cpu_use),qos=2,retain=True)
+    client.publish("cpu/temp", str(temperature),qos=2,retain=True)
     client.publish("monto/solar/sensors/accel_x", str(accel_x),qos=2,retain=True)
     client.publish("monto/solar/sensors/accel_y", str(accel_y),qos=2,retain=True)
     client.publish("monto/solar/sensors/accel_z", str(accel_z),qos=2,retain=True)
