@@ -66,23 +66,25 @@ def gatherData(startHour,startMinute,finishHour,finishMinute):
         _, _, _ ,ms= accel.auto_calibration()
 
         #***********take photos*****************************
-        print("lets start")
+        print("lets start",file=open(photosFolder+"output.txt","a+"))
         file_func()
         #wait until time = start time
         while not((datetime.now().time().hour == startHour) and (datetime.now().time().minute == startMinute)):
-            print ("wait "+str(datetime.now().time()))
+            print ("wait "+str(datetime.now().time()),file=open(photosFolder+"output.txt","a+"))
             time.sleep(30)
 
         #while time is different of finish time take photos
         while not((datetime.now().time().hour ==finishHour) and (datetime.now().time().minute == finishMinute )):
             capture(camera, CAMERA_1, photosFolder + time.strftime("%H:%M:%S") + ".jpg")
-            print("picture 1")
+            print("picture 1",file=open(photosFolder+"output.txt","a+"))
+            time.sleep(1)
             capture(camera, CAMERA_2, photosFolder + time.strftime("%H:%M:%S") + ".jpg")
-            print("picture 2")
+            print("picture 2",file=open(photosFolder+"output.txt","a+"))
             AxF, AyF, AzF,total_axes,angleX,angleY,angleZ,DxF, DyF, DzF = accel.gatherDistance(ms)
             Latitude,Longitude= gps.getGPSvalue()
             file = open(dataFile,"a+")
             file.write("{},{};{};{},{},{};{};{},{};{};{},{};{} \n".format(time.strftime("%H:%M:%S"),AxF,AyF,AzF,total_axes,angleX,angleY,angleZ,DxF,DyF,DzF,Latitude,Longitude))
+            print("save GPS & accelerometer data",file=open(photosFolder+"output.txt","a+"))
             file.close() 
                 
-    print('End')
+    print("End",file=open(photosFolder+"output.txt","a+"))

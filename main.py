@@ -6,6 +6,7 @@ import sys
 
 sys.path.append('gather_Data')
 import gatherData
+import gather
 
 sys.path.append('gather_Data/Accelero/')
 import Accel
@@ -29,6 +30,7 @@ planSite ="find_crack_in_map/Prototype vue de Haut.jpg"
 pathImage = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")+"/fissure/*.jpg"
 pathDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
 
+<<<<<<< HEAD
 startHour1   = 15
 startMinute1 = 29
 finishHour1  = 15
@@ -43,14 +45,29 @@ finishMinute2 = 33
 def main():
     
     """
+=======
+startHour1   = 11
+startMinute1 = 43
+finishHour1  = 11
+finishMinute1 = 44
+
+startHour2   = 15
+startMinute2 = 20
+finishHour2  = 15
+finishMinute2 = 30
+
+#**************************************Principal program***********************************
+def main():
+
+>>>>>>> 3b6500fea2baef9e096d2d527800e33b64370ba1
     gatherData.gatherData(startHour1,startMinute1,finishHour1,finishMinute1)#gather data until Time cleaning finish
-    gatherData.gatherData(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
+    gather.gather(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
     
     detection.detectcrack()# treat image and stock them in other folder(caisson folder, fissure folder,ligne de separation folder)
     """
     gpsDataOfcrackedMiror = fetchData(pathImage,pathDatafile)#create instance of the class that display acceleration, longitude and lattitude
     gpsDataArray = gpsDataOfcrackedMiror.gpsDataCouple() #stock gps data coordinate of all cracked miror in an array
-    #print("gpsdata array = ",gpsDataArray)
+
     
     siteMap = pinMap(planSite) #create instance of the class that recolor all damaged "caisson" coordinates using GPS coordinate sotcked in the array "gpsDataArray"
     for i in range (0,len(gpsDataArray)): #
