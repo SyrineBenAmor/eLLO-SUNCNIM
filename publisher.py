@@ -67,4 +67,4 @@ while True:
     client.publish("monto/solar/sensors/accel_x", str(accel_x),qos=2,retain=True)
     client.publish("monto/solar/sensors/accel_y", str(accel_y),qos=2,retain=True)
     client.publish("monto/solar/sensors/accel_z", str(accel_z),qos=2,retain=True)
-    time.sleep(1*60)
+    time.sleep(2)

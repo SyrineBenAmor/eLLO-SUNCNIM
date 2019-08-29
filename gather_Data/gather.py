@@ -38,7 +38,6 @@ def capture(camera, camera_number, path):
 
 def file_func():
     file = open(dataFile,"a+")
-    file.write("Time,AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2],Total_axes acceleration, AngleX(deg); AngleY(deg);AngleZ(deg), DistanceX[mm];DistanceY[mm];DistanceZ[mm], Latitude ;Longitude\n")
     file.close()
  
 

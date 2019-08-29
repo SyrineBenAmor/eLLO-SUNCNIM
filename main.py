@@ -30,11 +30,10 @@ planSite ="find_crack_in_map/Prototype vue de Haut.jpg"
 pathImage = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")+"/fissure/*.jpg"
 pathDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
 
-<<<<<<< HEAD
 startHour1   = 15
-startMinute1 = 29
-finishHour1  = 15
-finishMinute1 = 30
+startMinute1 = 51
+finishHour1  = 16
+finishMinute1 = 0
 
 startHour2   = 10
 startMinute2 = 32
@@ -44,22 +43,7 @@ finishMinute2 = 33
 #**************************************Principal program***********************************
 def main():
     
-    """
-=======
-startHour1   = 11
-startMinute1 = 43
-finishHour1  = 11
-finishMinute1 = 44
-
-startHour2   = 15
-startMinute2 = 20
-finishHour2  = 15
-finishMinute2 = 30
-
-#**************************************Principal program***********************************
-def main():
-
->>>>>>> 3b6500fea2baef9e096d2d527800e33b64370ba1
+    
     gatherData.gatherData(startHour1,startMinute1,finishHour1,finishMinute1)#gather data until Time cleaning finish
     gather.gather(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
     
@@ -78,6 +62,7 @@ def main():
     cv2.imwrite("/var/www/html/img/Fresnel.jpg",image)
     
     print("Execution Time = "+str(float(time.time() - then)) + " s")
+    """
     #sys.exit()
     #********************close condition*************************************
 
