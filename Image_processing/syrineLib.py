@@ -90,7 +90,6 @@ def processImage(gray, contrast, thresh):
                 box = np.int0(box)
                 cv2.drawContours(outContrast,[box],0,(0,255,0),2)
                 x,y = box[2][0],box[2][1]
-                cv2.putText(outContrast,"Seperation", (x,y -2), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), thickness = 2)
                 print("Separation")
                 state = "separation"
     if brightRect != 0 :

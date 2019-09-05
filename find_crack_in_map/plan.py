@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import math
-
+import cv2
 
 mirorRect = {'width' : 14, 'height' : 86}
 heightSiteInMeters = 18.55 # largeur site =  18,55 m
@@ -30,13 +30,13 @@ class pinMap():
         rows, cols = plan.shape[:2]
         #print("Image Dimensions : " +str([rows, cols]))
         mean = plan.mean()
-        _,thresh = cv2.threshold(plan, mean-50, 255,  cv2.THRESH_BINARY)
-        
-
+        _,imageFilter = cv2.threshold(plan, mean-50, 255,  cv2.THRESH_BINARY)
+        #cv2.imshow("thresh",thresh)
+        """
         # fix polygon vertex
-        top_left    = [0, rows*0.35]
-        top_right   = [cols, rows*0.35]
-        bottom_left = [0, rows*0.65]
+        top_left    = [0, rows*0.80]
+        top_right   = [cols, rows*0.80]
+        bottom_left = [0, rows*0.]
         bottom_right= [cols, rows*0.65]
 
         vertices = np.array([[bottom_left,top_left, top_right, bottom_right]], dtype=np.int32)
@@ -45,8 +45,9 @@ class pinMap():
         mask = np.zeros_like(thresh)                                    #initialize a black mask
         cv2.fillPoly(mask, vertices, 255)                               # fill the inside of polygon with white 
         masked_image = cv2.bitwise_and(thresh, mask)                    # apply the mask to the binary image
-        #cv2.imshow("masked image",masked_image)
-        return masked_image
+        cv2.imshow("masked image",masked_image)
+        """
+        return imageFilter
 
     
     def listOfCaisson (self, image):
@@ -63,7 +64,7 @@ class pinMap():
     def origin(self):
         _,contours,_ = cv2.findContours(self.imageFilter, 1, 2)
         rect = cv2.minAreaRect(contours[7])
-        newOrigin = (int(rect[0][0] - rect[1][1]/2),int(rect[0][1] + rect[1][0]/2))
+        newOrigin = (int(rect[0][0] - rect[1][1]/2),int(rect[0][1] + rect[1][0]/2))  
         return newOrigin
 
     def convertRealCoordinateToPixel(self, realCoordinate):
@@ -133,8 +134,4 @@ class pinMap():
         dx = (LatOrigin - lat)*40000/360
         #print("x [m], y [m]=" ,abs(dx*1000), abs(dy*1000))
         realCoordinate = abs(dx*1000),abs(dy*1000)
-        return realCoordinate
-
-        
-        
-        
+        return realCoordinate        

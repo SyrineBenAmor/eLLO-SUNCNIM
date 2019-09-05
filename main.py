@@ -43,12 +43,12 @@ finishMinute2 = 33
 #**************************************Principal program***********************************
 def main():
     
-    
+    """
     gatherData.gatherData(startHour1,startMinute1,finishHour1,finishMinute1)#gather data until Time cleaning finish
     gather.gather(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
-    
-    detection.detectcrack()# treat image and stock them in other folder(caisson folder, fissure folder,ligne de separation folder)
     """
+    detection.detectcrack()# treat image and stock them in other folder(caisson folder, fissure folder,ligne de separation folder)
+    
     gpsDataOfcrackedMiror = fetchData(pathImage,pathDatafile)#create instance of the class that display acceleration, longitude and lattitude
     gpsDataArray = gpsDataOfcrackedMiror.gpsDataCouple() #stock gps data coordinate of all cracked miror in an array
 
@@ -62,7 +62,7 @@ def main():
     cv2.imwrite("/var/www/html/img/Fresnel.jpg",image)
     
     print("Execution Time = "+str(float(time.time() - then)) + " s")
-    """
+    
     #sys.exit()
     #********************close condition*************************************
 
