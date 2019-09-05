@@ -1,9 +1,12 @@
 import time
+import os
 from gpiozero import CPUTemperature
 import psutil
 import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
-
+import microstacknode.hardware.gps.l80gps 
+from microstacknode.hardware.accelerometer.mma8452q import MMA8452Q
+gps = microstacknode.hardware.gps.l80gps.L80GPS()
 
 Broker = "192.168.0.130"
 sub_topic_accel = "cpu/data"    # receive messages on this topic
@@ -73,11 +76,25 @@ client.connect(Broker, 1883, 60)
 client.loop_start()
 
 while True:
-    accel_x,accel_y,accel_z= read_acceleration()
-    temperature, cpu_use = cpu_data()
-    client.publish("cpu/memory", str(cpu_use),qos=2,retain=True)
-    client.publish("cpu/temp", str(temperature),qos=2,retain=True)
-    client.publish("monto/solar/sensors/accel_x", str(accel_x),qos=2,retain=True)
-    client.publish("monto/solar/sensors/accel_y", str(accel_y),qos=2,retain=True)
-    client.publish("monto/solar/sensors/accel_z", str(accel_z),qos=2,retain=True)
-    time.sleep(2)
+    exist = os.path.isfile(dataFile)
+    if exist:
+        accel_x,accel_y,accel_z= read_acceleration()
+        temperature, cpu_use = cpu_data()
+        client.publish("cpu/memory", str(cpu_use),qos=2,retain=True)
+        client.publish("cpu/temp", str(temperature),qos=2,retain=True)
+        client.publish("monto/solar/sensors/accel_x", str(accel_x),qos=2,retain=True)
+        client.publish("monto/solar/sensors/accel_y", str(accel_y),qos=2,retain=True)
+        client.publish("monto/solar/sensors/accel_z", str(accel_z),qos=2,retain=True)
+        time.sleep(2)
+    else:
+        data = gps.get_gprmc()
+        lat = data.get("latitude")
+        long = data.get("longitude")
+        print("latitude,longitude",lat,long)
+        temperature, cpu_use = cpu_data()
+        client.publish("cpu/memory", str(cpu_use),qos=2,retain=True)
+        client.publish("cpu/temp", str(temperature),qos=2,retain=True)
+        client.publish("monto/solar/sensors/gps_lat", str(lat),qos=2,retain=True)
+        client.publish("monto/solar/sensors/gps_long", str(long),qos=2,retain=True)
+        time.sleep(2)
+        
