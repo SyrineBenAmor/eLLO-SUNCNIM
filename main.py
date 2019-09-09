@@ -19,6 +19,7 @@ import displayData
 from displayData import fetchData 
 import plan
 from plan import pinMap
+import configInput
 
 sys.path.append('Image_processing/')
 import Crack_Detection as detection
@@ -31,20 +32,20 @@ pathImage = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y"
 pathDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
 
 startHour1   = 15
-startMinute1 = 51
-finishHour1  = 16
-finishMinute1 = 0
+startMinute1 = 1
+finishHour1  = 15
+finishMinute1 = 2
 
-startHour2   = 10
-startMinute2 = 32
-finishHour2  = 10
-finishMinute2 = 33
+startHour2   = 15
+startMinute2 = 2
+finishHour2  = 15
+finishMinute2 = 3
 
 #**************************************Principal program***********************************
 def main():
+    config_input(26,13)
     
-    """
-    gatherData.gatherData(startHour1,startMinute1,finishHour1,finishMinute1)#gather data until Time cleaning finish
+    #gatherData.gatherData(startHour1,startMinute1,finishHour1,finishMinute1)#gather data until Time cleaning finish
     gather.gather(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
     """
     detection.detectcrack()# treat image and stock them in other folder(caisson folder, fissure folder,ligne de separation folder)
@@ -62,7 +63,7 @@ def main():
     cv2.imwrite("/var/www/html/img/Fresnel.jpg",image)
     
     print("Execution Time = "+str(float(time.time() - then)) + " s")
-    
+    """
     #sys.exit()
     #********************close condition*************************************
 
