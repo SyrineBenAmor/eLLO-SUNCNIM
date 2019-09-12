@@ -74,12 +74,14 @@ def gather(startHour,startMinute,finishHour,finishMinute):
 
         #while time is different of finish time take photos
         while not((datetime.now().time().hour ==finishHour) and (datetime.now().time().minute == finishMinute )):
-            capture(camera, CAMERA_1, photosFolder + time.strftime("%H:%M:%S") + ".jpg")
+            if not os.path.exists(photosFolder +"cam1"):
+                os.makedirs(photosFolder +"cam1")
+            capture(camera, CAMERA_1, photosFolder+"cam1/" + time.strftime("%H:%M:%S") + ".jpg")
             print("picture 1",file=open(photosFolder+"output.txt","a+"))
-            AxF, AyF, AzF,total_axes,angleX,angleY,angleZ,DxF, DyF, DzF = accel.gatherDistance(ms)
+            AxF, AyF, AzF,total_axes,angleX,angleY,angleZ,= accel.gatherAccel(ms)
             Latitude,Longitude= gps.getGPSvalue()
             file = open(dataFile,"a+")
-            file.write("{},{};{};{},{},{};{};{},{};{};{},{};{} \n".format(time.strftime("%H:%M:%S"),AxF,AyF,AzF,total_axes,angleX,angleY,angleZ,DxF,DyF,DzF,Latitude,Longitude))
+            file.write("{},{};{};{},{},{};{};{},{};{} \n".format(time.strftime("%H:%M:%S"),AxF,AyF,AzF,total_axes,angleX,angleY,angleZ,Latitude,Longitude))
             file.close() 
                 
     print("End",file=open(photosFolder+"output.txt","a+"))

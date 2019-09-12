@@ -38,7 +38,7 @@ def capture(camera, camera_number, path):
 
 def file_func():
     file = open(dataFile,"a+")
-    file.write("Time,AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2],Total_axes acceleration, AngleX(deg); AngleY(deg);AngleZ(deg), DistanceX[mm];DistanceY[mm];DistanceZ[mm], Latitude ;Longitude\n")
+    file.write("Time,AccelX[mm/s^2];AccelY[mm/s^2];AccelZ[mm/s^2],Total_axes acceleration, AngleX(deg); AngleY(deg);AngleZ(deg), Latitude ;Longitude\n")
     file.close()
  
 
@@ -75,15 +75,19 @@ def gatherData(startHour,startMinute,finishHour,finishMinute):
 
         #while time is different of finish time take photos
         while not((datetime.now().time().hour ==finishHour) and (datetime.now().time().minute == finishMinute )):
-            capture(camera, CAMERA_1, photosFolder + time.strftime("%H:%M:%S") + ".jpg")
+            if not os.path.exists(photosFolder +"camera_1"):
+                os.makedirs(photosFolder +"camera_1")
+            if not os.path.exists(photosFolder +"camera_2"):
+                os.makedirs(photosFolder +"camera_2")
+            capture(camera, CAMERA_1, photosFolder +"camera_1/"+ time.strftime("%H:%M:%S") + ".jpg")
             print("picture 1",file=open(photosFolder+"output.txt","a+"))
             time.sleep(1)
-            capture(camera, CAMERA_2, photosFolder + time.strftime("%H:%M:%S") + ".jpg")
+            capture(camera, CAMERA_2, photosFolder+"camera_2/" + time.strftime("%H:%M:%S") + ".jpg")
             print("picture 2",file=open(photosFolder+"output.txt","a+"))
-            AxF, AyF, AzF,total_axes,angleX,angleY,angleZ,DxF, DyF, DzF = accel.gatherDistance(ms)
+            AxF, AyF, AzF,total_axes,angleX,angleY,angleZ = accel.gatherAccel(ms)
             Latitude,Longitude= gps.getGPSvalue()
             file = open(dataFile,"a+")
-            file.write("{},{};{};{},{},{};{};{},{};{};{},{};{} \n".format(time.strftime("%H:%M:%S"),AxF,AyF,AzF,total_axes,angleX,angleY,angleZ,DxF,DyF,DzF,Latitude,Longitude))
+            file.write("{},{};{};{},{},{};{};{},{};{} \n".format(time.strftime("%H:%M:%S"),AxF,AyF,AzF,total_axes,angleX,angleY,angleZ,Latitude,Longitude))
             print("save GPS & accelerometer data",file=open(photosFolder+"output.txt","a+"))
             file.close() 
                 
