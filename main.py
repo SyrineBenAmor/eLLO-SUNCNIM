@@ -31,25 +31,28 @@ planSite ="find_crack_in_map/Prototype vue de Haut.jpg"
 pathImage = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")+"/fissure/*.jpg"
 pathDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
 
-startHour1   = 15
-startMinute1 = 1
-finishHour1  = 15
-finishMinute1 = 2
+pathPhotoCam1 = "gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/camera_1/"+"*.jpg"
+pathPhotoCam2 = "gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/camera_2/"+"*.jpg"
 
-startHour2   = 15
-startMinute2 = 2
-finishHour2  = 15
-finishMinute2 = 3
+startHour1   = 14
+startMinute1 = 19
+finishHour1  = 14
+finishMinute1 = 20
 
+startHour2   = 14
+startMinute2 = 21
+finishHour2  = 14
+finishMinute2 = 22
 #**************************************Principal program***********************************
 def main():
-    config_input(26,13)
+
     
-    #gatherData.gatherData(startHour1,startMinute1,finishHour1,finishMinute1)#gather data until Time cleaning finish
-    gather.gather(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
-    """
-    detection.detectcrack()# treat image and stock them in other folder(caisson folder, fissure folder,ligne de separation folder)
+    gatherData.gatherData(startHour1,startMinute1,finishHour1,finishMinute1)#gather data until Time cleaning finish
+    gatherData.gatherData(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
+    #gather.gather(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
     
+    detection.detectcrack(pathPhotoCam1)# treat image and stock them in other folder(caisson folder, fissure folder,ligne de separation folder)
+    detection.detectcrack(pathPhotoCam2)
     gpsDataOfcrackedMiror = fetchData(pathImage,pathDatafile)#create instance of the class that display acceleration, longitude and lattitude
     gpsDataArray = gpsDataOfcrackedMiror.gpsDataCouple() #stock gps data coordinate of all cracked miror in an array
 
@@ -63,7 +66,7 @@ def main():
     cv2.imwrite("/var/www/html/img/Fresnel.jpg",image)
     
     print("Execution Time = "+str(float(time.time() - then)) + " s")
-    """
+    
     #sys.exit()
     #********************close condition*************************************
 

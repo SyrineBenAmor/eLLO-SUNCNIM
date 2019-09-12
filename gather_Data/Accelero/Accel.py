@@ -45,7 +45,7 @@ def low_pass_filtering(s, N):
     # return pandas.rolling_mean(x, N)[N-1:]
     return s.rolling(window=N, win_type='triang').mean()
                
-def gatherDistance(ms):
+def gatherAccel(ms):
     # STEP01: initialize transport time and final meassures
     ti = time.time()
 
@@ -167,7 +167,7 @@ def gatherDistance(ms):
             print('angle (deg) : | x: {:.2f}, y: {:.2f}, z: {:.2f}'.format(angleX, angleY, angleZ))
             print("\n")
             
-            return(AxF, AyF, AzF,total_axes,angleX,angleY,angleZ,DxF, DyF, DzF)    
+            return(AxF, AyF, AzF,total_axes,angleX,angleY,angleZ)    
             # initialize transport time and final meassures
             ti = time.time()
 

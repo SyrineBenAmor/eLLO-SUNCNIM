@@ -7,13 +7,10 @@ import os
 
 import syrineLib as syrine
 
-global path
-
-path = "gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/"+"*.jpg"
 #**********************************************************
 
 
-def detectcrack():#replace with def deteccrack(path):
+def detectcrack(path):#replace with def deteccrack(path):
     i=0
     #create new folder every day which name is the date into image_processing_output folder 
     newFolderEveryDay = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")

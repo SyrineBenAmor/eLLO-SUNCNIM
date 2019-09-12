@@ -96,7 +96,7 @@ def processImage(gray, contrast, thresh):
         box= cv2.boxPoints(brightRect)
         box = np.int0(box)
         cv2.drawContours(outContrast,[box],0,(255,0,0),2)
-        print("Crack Detected , better Call Adrien 0611223344")
+        print("Crack Detected")
         state = "fissure"
     return outContrast, state
 
