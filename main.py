@@ -34,23 +34,23 @@ pathDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
 pathPhotoCam1 = "gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/camera_1/"+"*.jpg"
 pathPhotoCam2 = "gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/camera_2/"+"*.jpg"
 
-startHour1   = 14
-startMinute1 = 19
-finishHour1  = 14
-finishMinute1 = 20
+startHour1   = 22
+startMinute1 = 2
+finishHour1  = 22
+finishMinute1 = 50
 
-startHour2   = 14
-startMinute2 = 21
-finishHour2  = 14
-finishMinute2 = 22
+startHour2   = 1
+startMinute2 = 30
+finishHour2  = 2
+finishMinute2 = 25
 #**************************************Principal program***********************************
 def main():
 
     
-    gatherData.gatherData(startHour1,startMinute1,finishHour1,finishMinute1)#gather data until Time cleaning finish
-    gatherData.gatherData(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
+    #gatherData.gatherData(startHour1,startMinute1,finishHour1,finishMinute1)#gather data until Time cleaning finish
+    #gatherData.gatherData(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
     #gather.gather(startHour2,startMinute2,finishHour2,finishMinute2)#gather data until Time cleaning finish
-    
+
     detection.detectcrack(pathPhotoCam1)# treat image and stock them in other folder(caisson folder, fissure folder,ligne de separation folder)
     detection.detectcrack(pathPhotoCam2)
     gpsDataOfcrackedMiror = fetchData(pathImage,pathDatafile)#create instance of the class that display acceleration, longitude and lattitude
@@ -62,11 +62,11 @@ def main():
         image = siteMap.brokenMirrors(gpsDataArray[i][0],gpsDataArray[i][1])
     cv2.imshow("Image with red caisson ", image)
     time.sleep(5)
-    cv2.imwrite("Image_processing/image_processing_output/"+time.strftime("Plan %d-%m-%Y")+".jpg",image)
+    cv2.imwrite("Image_processing/image_processing_output/"+time.strftime("Plan %d-%m-%Y")+".jpg",image)#save the result image
     cv2.imwrite("/var/www/html/img/Fresnel.jpg",image)
     
     print("Execution Time = "+str(float(time.time() - then)) + " s")
-    
+
     #sys.exit()
     #********************close condition*************************************
 

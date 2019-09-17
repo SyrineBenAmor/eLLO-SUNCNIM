@@ -9,11 +9,13 @@ from microstacknode.hardware.accelerometer.mma8452q import MMA8452Q
 gps = microstacknode.hardware.gps.l80gps.L80GPS()
 
 Broker = "192.168.0.130"
-sub_topic_accel = "cpu/data"    # receive messages on this topic
-sub_topic_accel = "accel/instructions"    # receive messages on this topic
-sub_topic_lat = "latitude/instructions"    # receive messages on this topic
-sub_topic_lon = "longitude/instructions"    # receive messages on this topic
-sub_topic_time = "time/instructions"    # receive messages on this topic
+sub_topic_cpu_temp = "cpu/temp"    # receive messages on this topic
+sub_topic_cpu_mem = "cpu/memory"    # receive messages on this topic
+sub_topic_lat = "gps/latitude"    # receive messages on this topic
+sub_topic_lon = "gps/longitude"    # receive messages on this topic
+sub_topic_accelx = "accelerometre/axe_x"    # receive messages on this topic
+sub_topic_accely = "accelerometre/axe_y"    # receive messages on this topic
+sub_topic_accelz = "accelerometre/axe_z"    # receive messages on this topic
 
 pub_topic = "sensor/data"       # send messages to this topic
 
@@ -53,10 +55,13 @@ def cpu_data():
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
-    client.subscribe(sub_topic_accel)
+    client.subscribe(sub_topic_accelx)
+    client.subscribe(sub_topic_accely)
+    client.subscribe(sub_topic_accelz)
     client.subscribe(sub_topic_lat)
     client.subscribe(sub_topic_lon)
-    client.subscribe(sub_topic_time)
+    client.subscribe(sub_topic_cpu_temp)
+    client.subscribe(sub_topic_cpu_mem)
 
 # when receiving a mqtt message do this;
 
@@ -80,11 +85,11 @@ while True:
     if exist:
         accel_x,accel_y,accel_z= read_acceleration()
         temperature, cpu_use = cpu_data()
-        client.publish("cpu/memory", str(cpu_use),qos=2,retain=True)
-        client.publish("cpu/temp", str(temperature),qos=2,retain=True)
-        client.publish("monto/solar/sensors/accel_x", str(accel_x),qos=2,retain=True)
-        client.publish("monto/solar/sensors/accel_y", str(accel_y),qos=2,retain=True)
-        client.publish("monto/solar/sensors/accel_z", str(accel_z),qos=2,retain=True)
+        client.publish(sub_topic_cpu_mem , str(cpu_use),qos=2,retain=True)
+        client.publish(sub_topic_cpu_temp , str(temperature),qos=2,retain=True)
+        client.publish(sub_topic_accelx, str(accel_x),qos=2,retain=True)
+        client.publish(sub_topic_accely, str(accel_y),qos=2,retain=True)
+        client.publish(sub_topic_accelz, str(accel_z),qos=2,retain=True)
         time.sleep(2)
     else:
         data = gps.get_gprmc()
@@ -92,9 +97,10 @@ while True:
         long = data.get("longitude")
         print("latitude,longitude",lat,long)
         temperature, cpu_use = cpu_data()
-        client.publish("cpu/memory", str(cpu_use),qos=2,retain=True)
-        client.publish("cpu/temp", str(temperature),qos=2,retain=True)
-        client.publish("monto/solar/sensors/gps_lat", str(lat),qos=2,retain=True)
-        client.publish("monto/solar/sensors/gps_long", str(long),qos=2,retain=True)
+        client.publish(sub_topic_cpu_mem , str(cpu_use),qos=2,retain=True)
+        client.publish(sub_topic_cpu_temp, str(temperature),qos=2,retain=True)
+        client.publish(sub_topic_lat, str(lat),qos=2,retain=True)
+        client.publish(sub_topic_lon, str(long),qos=2,retain=True)
+        
         time.sleep(2)
         
