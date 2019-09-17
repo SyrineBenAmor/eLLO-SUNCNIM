@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 
 smallRect = 10
-bigRect = {'width' : 150, 'height' : 100}
-separation = {'width' : 150, 'height' : 60}
-crack = {'mean' : 12, 'width' : 200}
+bigRect = {'width' : 170, 'height' : 120}
+separation = {'width' : 160, 'height' : 60}
+crack = {'mean' : 5, 'width' : 200}
 
 def crop(img, rect):
 
@@ -53,14 +53,16 @@ def processImage(gray, contrast, thresh):
     outContrast = contrast.copy()
     state = ''
     _,contours,_ = cv2.findContours(thresh,1,2)
+    cv2.drawContours(contrast,contours,-1,(0,0,255),2)
     nbContoursFound = len(contours)
-    #print("contours found "+str(nbContoursFound))
+    print("contours found "+str(nbContoursFound))
     nbContoursSelected = 0
     biggestRect = 0
     brightRect = 0
     rects = []
     for cnt in contours :
         rect = cv2.minAreaRect(cnt)
+        #print("all rect found ",rect)
         #rect = cv2.boundingRect(cnt)
         if rect[1][0] > bigRect['width'] and rect[1][1] > bigRect['height'] : # look for a big Rect
             if biggestRect == 0 :
@@ -71,7 +73,9 @@ def processImage(gray, contrast, thresh):
         else : #biggest Rect is not added to the List (minimize time)
             if rect[1][0] > smallRect and rect[1][1] > smallRect : #eliminate small rects
                 cropImage = crop(gray, rect)
+                #cv2.imshow("crop image",cropImage)
                 mean = cropImage.mean()
+                print("mean croped image",mean)
                 if  mean > crack['mean'] and rect[1][0] > crack['width']:
                     brightRect = rect
                 rects.append(rect) # add rect to list of rects
@@ -84,8 +88,11 @@ def processImage(gray, contrast, thresh):
         state = "caisson"
     else :
         for rect in rects :
-            #print(rect)
-            if (rect[1][0] > separation['width'] and rect[1][1] < separation['height'] ) or (rect[1][0] < separation['height'] and rect[1][1] > separation['width']):
+            print("fissure-sep-rect",rect)
+            cropImage = crop(gray, rect)
+            #cv2.imshow("crop image",cropImage)
+            mean = cropImage.mean()
+            if ((rect[1][0] > separation['width'] and rect[1][1] < separation['height'] ) or (rect[1][0] < separation['height'] and rect[1][1] > separation['width'])) and mean < crack['mean']:
                 box= cv2.boxPoints(rect)
                 box = np.int0(box)
                 cv2.drawContours(outContrast,[box],0,(0,255,0),2)
@@ -99,5 +106,3 @@ def processImage(gray, contrast, thresh):
         print("Crack Detected")
         state = "fissure"
     return outContrast, state
-
-
