@@ -77,7 +77,14 @@ def get_contour_type(img,contour):
         width = rect[1][0]
         height = rect[1][1]
         
-        if (mean > crack['mean']) :   
+        if (mean > crack['mean']) and (crack['width_min']<width <crack['width_max']) and (crack['height_min']<height <crack['height_max']) :   
+            #print("crack detected")
+            return CRACK, rect
+
+        width = rect[1][1]
+        height = rect[1][0]
+        
+        if (mean > crack['mean']) and (crack['width_min']<width <crack['width_max']) and (crack['height_min']<height <crack['height_max']) :   
             #print("crack detected")
             return CRACK, rect
 

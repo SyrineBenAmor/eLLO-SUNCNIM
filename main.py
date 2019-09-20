@@ -34,7 +34,7 @@ pathDatafile = "gather_Data/data/"+time.strftime("%d-%m-%Y")+".txt"
 pathPhotoCam1 = "gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/camera_1/"+"*.jpg"
 pathPhotoCam2 = "gather_Data/photos/"+time.strftime("%d-%m-%Y")+"/camera_2/"+"*.jpg"
 
-photos = "/home/pi/Desktop/12-09-2019/camera_2/*.jpg"
+photos = "/home/pi/Desktop/12-09-2019/camera_1/*.jpg"
 startHour1   = 22
 startMinute1 = 2
 finishHour1  = 22
