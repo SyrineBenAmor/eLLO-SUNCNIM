@@ -7,10 +7,15 @@ import os
 
 import syrineLib as syrine
 
+SEPARATION = "SEPARATION"
+CRACK = "CRACK"
+CAISSON = "CAISSON"
+OTHERS = "OTHERS"
+
 #**********************************************************
 
 
-def detectcrack(path):#replace with def deteccrack(path):
+def detectcrack(path):
     i=0
     #create new folder every day which name is the date into image_processing_output folder 
     newFolderEveryDay = "Image_processing/image_processing_output/"+time.strftime("%d-%m-%Y")
@@ -30,7 +35,7 @@ def detectcrack(path):#replace with def deteccrack(path):
     if not os.path.exists(folderOthers):
         os.makedirs(folderOthers)
     #************************************************
-    
+    state =''
     for imagePath in glob.glob(path):
         i+=1
         imageName = imagePath.split("/")[-1] # take the latest element as name of the image
@@ -42,21 +47,21 @@ def detectcrack(path):#replace with def deteccrack(path):
         beta= 0
         contrast = syrine.contrast(gray, alpha, beta)
         #syrine.show('Contrast', contrast)
-        outContrast,state = syrine.processImage(gray, contrast, thresh)
-        if state == "separation" :
-            thresh = syrine.threshold(gray,"binary")
-            outContrastBis,state = syrine.processImage(gray, contrast, thresh)
-            if state != "caisson" : #it's a separation image
-                #syrine.show('rectangle '+str(i),outContrast)
-                syrine.saveImage(folderSeparation +"/" + imageName,outContrast)
-            else :#it's caisson image
-                #syrine.show('rectangle '+str(i),outContrastBis) 
-                syrine.saveImage(folderCaisson +"/" + imageName,outContrastBis)
-        elif state == 'fissure' :#fissure
-            #syrine.show('rectangle '+str(i),outContrast)
-            syrine.saveImage(folderFissure +"/" + imageName,outContrast)
-        elif state == 'caisson' : #caisson
-            syrine.saveImage(folderCaisson +"/" + imageName,outContrast)
-        else: #black image (without contours)
-            syrine.saveImage(folderOthers +"/" + imageName,outContrast) 
+        img_with_colored_contours, state = syrine.processImage(gray, contrast, thresh)
+        if state == CRACK :
+            print(imageName)
+            syrine.saveImage(folderFissure +"/"+ imageName, img_with_colored_contours)
+        
+        if state == SEPARATION :
+            print(imageName)
+            syrine.saveImage(folderSeparation +"/"+ imageName, img_with_colored_contours)
+
+        if state == CAISSON :
+            print(imageName)
+            syrine.saveImage(folderCaisson +"/"+ imageName, img_with_colored_contours)
+
+        if state ==OTHERS :
+            print(imageName)
+            syrine.saveImage(folderOthers +"/" +imageName, img_with_colored_contours)
+
     print("Done")

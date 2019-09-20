@@ -2,9 +2,21 @@ import cv2
 import numpy as np
 
 smallRect = 10
-bigRect = {'width' : 170, 'height' : 120}
-separation = {'width' : 160, 'height' : 60}
-crack = {'mean' : 5, 'width' : 200}
+crack = {'mean' : 10,'width_min': 9, 'width_max' : 60 ,'height_min': 100,'height_max' :500}
+separation = {'mean' : 10, 'width_min': 4, 'width_max' : 30 ,'height_min': 100,'height_max' :900}
+caisson = {'width_min': 60, 'width_max' : 250 ,'height_min': 600,'height_max' :1100}
+
+
+SEPARATION = "SEPARATION"
+CRACK = "CRACK"
+CAISSON = "CAISSON"
+NOISE = "NOISE"
+OTHERS = "OTHERS"
+
+BLUE = (255,0,0)
+GREEN = (0,255,0)
+RED = (0,0,255)
+YELLOW = (255,255,0)
 
 def crop(img, rect):
 
@@ -49,60 +61,80 @@ def show(label, img):
 def saveImage(path,img):
     cv2.imwrite(path,img)
 
+
+def get_contour_type(img,contour):
+    rect = cv2.minAreaRect(contour)
+    width = rect[1][0]
+    height = rect[1][1]
+    if width > smallRect and height > smallRect :
+        cropImage = crop(img, rect)
+        mean = cropImage.mean()
+        
+        ##################################################  fisssure  ######################################
+        width = rect[1][0]
+        height = rect[1][1]
+        if ((mean > crack['mean']) and (width in range(crack['width_min'],crack['width_max'])) and (height in range(crack['height_min'],crack['height_max'])) ) :   
+            print("crack detected")
+            return CRACK, rect
+
+        width = rect[1][1]
+        height = rect[1][0]
+        if ((mean > crack['mean']) and (width in range(crack['width_min'],crack['width_max'])) and (height in range(crack['height_min'],crack['height_max'])) ) :   
+            print("crack detected")
+            return CRACK, rect
+
+        ##################################################  Separation  ######################################
+        width = rect[1][0]
+        height = rect[1][1]
+        if ((mean < separation['mean']) and (width in range(separation['width_min'],separation['width_max'])) and (height in range(separation['height_min'],separation['height_max']))) :
+            print("separation")
+            return SEPARATION, rect
+
+        width = rect[1][1]
+        height = rect[1][0]
+        if ((mean < separation['mean']) and (width in range(separation['width_min'],separation['width_max'])) and (height in range(separation['height_min'],separation['height_max']))) :
+            print("separation")
+            return SEPARATION, rect
+
+        ##################################################  Caisson  ######################################
+        width = rect[1][0]
+        height = rect[1][1]
+        if (width in range(caisson['width_min'],caisson['width_max'])) and (height in range(caisson['width_min'],caisson['width_max'])):
+            print("caisson")
+            return CAISSON, rect
+
+        width = rect[1][1]
+        height = rect[1][0]
+        if (width in range(caisson['width_min'],caisson['width_max'])) and (height in range(caisson['width_min'],caisson['width_max'])):
+            print("caisson")
+            return CAISSON, rect
+    print("others")
+    return OTHERS, rect
+
 def processImage(gray, contrast, thresh):
-    outContrast = contrast.copy()
+    img_with_colored_contours = contrast.copy()
+    _,contours,hierarchy = cv2.findContours(thresh,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+    # remove noise
+    #contours = remove_noise(contours)
+    #find the type to the image
     state = ''
-    _,contours,_ = cv2.findContours(thresh,1,2)
-    cv2.drawContours(contrast,contours,-1,(0,0,255),2)
-    nbContoursFound = len(contours)
-    print("contours found "+str(nbContoursFound))
-    nbContoursSelected = 0
-    biggestRect = 0
-    brightRect = 0
-    rects = []
-    for cnt in contours :
-        rect = cv2.minAreaRect(cnt)
-        #print("all rect found ",rect)
-        #rect = cv2.boundingRect(cnt)
-        if rect[1][0] > bigRect['width'] and rect[1][1] > bigRect['height'] : # look for a big Rect
-            if biggestRect == 0 :
-                biggestRect = rect
-            else :
-                if (rect[1][0]*rect[1][1]) > (biggestRect[1][0]*biggestRect[1][1]):
-                    biggestRect = rect
-        else : #biggest Rect is not added to the List (minimize time)
-            if rect[1][0] > smallRect and rect[1][1] > smallRect : #eliminate small rects
-                cropImage = crop(gray, rect)
-                #cv2.imshow("crop image",cropImage)
-                mean = cropImage.mean()
-                print("mean croped image",mean)
-                if  mean > crack['mean'] and rect[1][0] > crack['width']:
-                    brightRect = rect
-                rects.append(rect) # add rect to list of rects
-    
-    if biggestRect != 0 :
-        box= cv2.boxPoints(biggestRect)
+    for contour in contours:
+        state, rect = get_contour_type(gray,contour)
+        if state == CRACK :
+            color = BLUE
+            folder = "crack/"
+        elif state == SEPARATION: 
+            color = GREEN
+            folder = "separation/"
+        elif state == CAISSON:
+            color = RED
+            folder = "caisson/"
+        elif state == OTHERS :
+            color = YELLOW
+            folder = "others/"
+                 
+        box= cv2.boxPoints(rect)
         box = np.int0(box)
-        cv2.drawContours(outContrast,[box],0,(0,0,255),2)
-        print("Caisson")
-        state = "caisson"
-    else :
-        for rect in rects :
-            print("fissure-sep-rect",rect)
-            cropImage = crop(gray, rect)
-            #cv2.imshow("crop image",cropImage)
-            mean = cropImage.mean()
-            if ((rect[1][0] > separation['width'] and rect[1][1] < separation['height'] ) or (rect[1][0] < separation['height'] and rect[1][1] > separation['width'])) and mean < crack['mean']:
-                box= cv2.boxPoints(rect)
-                box = np.int0(box)
-                cv2.drawContours(outContrast,[box],0,(0,255,0),2)
-                x,y = box[2][0],box[2][1]
-                print("Separation")
-                state = "separation"
-    if brightRect != 0 :
-        box= cv2.boxPoints(brightRect)
-        box = np.int0(box)
-        cv2.drawContours(outContrast,[box],0,(255,0,0),2)
-        print("Crack Detected")
-        state = "fissure"
-    return outContrast, state
+        cv2.drawContours(img_with_colored_contours,[box],0,color, 2)
+
+    return img_with_colored_contours, state
