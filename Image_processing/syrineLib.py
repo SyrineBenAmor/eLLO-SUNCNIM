@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 
 smallRect = 10
-crack = {'mean' : 10,'width_min': 9, 'width_max' : 60 ,'height_min': 100,'height_max' :500}
-separation = {'mean' : 10, 'width_min': 4, 'width_max' : 30 ,'height_min': 100,'height_max' :900}
-caisson = {'width_min': 60, 'width_max' : 250 ,'height_min': 600,'height_max' :1100}
+crack = {'mean' : 10,'width_min': 9, 'width_max' : 200 ,'height_min': 100,'height_max' :550}
+separation = {'mean' : 10 , 'width_min': 4, 'width_max' : 40 ,'height_min': 100,'height_max' :1000}
+caisson = {'width' : 100 ,'height': 600}
 
 
 SEPARATION = "SEPARATION"
@@ -16,7 +16,7 @@ OTHERS = "OTHERS"
 BLUE = (255,0,0)
 GREEN = (0,255,0)
 RED = (0,0,255)
-YELLOW = (255,255,0)
+YELLOW = (0,0,0)
 
 def crop(img, rect):
 
@@ -66,20 +66,18 @@ def get_contour_type(img,contour):
     rect = cv2.minAreaRect(contour)
     width = rect[1][0]
     height = rect[1][1]
+    
+
     if width > smallRect and height > smallRect :
         cropImage = crop(img, rect)
         mean = cropImage.mean()
-        
+        print ("rect  =", rect)
+        print ("mean= ", mean)
         ##################################################  fisssure  ######################################
         width = rect[1][0]
         height = rect[1][1]
-        if ((mean > crack['mean']) and (width in range(crack['width_min'],crack['width_max'])) and (height in range(crack['height_min'],crack['height_max'])) ) :   
-            print("crack detected")
-            return CRACK, rect
-
-        width = rect[1][1]
-        height = rect[1][0]
-        if ((mean > crack['mean']) and (width in range(crack['width_min'],crack['width_max'])) and (height in range(crack['height_min'],crack['height_max'])) ) :   
+        
+        if (mean > crack['mean']) :   
             print("crack detected")
             return CRACK, rect
 
@@ -99,13 +97,14 @@ def get_contour_type(img,contour):
         ##################################################  Caisson  ######################################
         width = rect[1][0]
         height = rect[1][1]
-        if (width in range(caisson['width_min'],caisson['width_max'])) and (height in range(caisson['width_min'],caisson['width_max'])):
+        print("width1, height1",width, height)
+        if width > caisson['width'] and height > caisson['height']:
             print("caisson")
             return CAISSON, rect
 
         width = rect[1][1]
         height = rect[1][0]
-        if (width in range(caisson['width_min'],caisson['width_max'])) and (height in range(caisson['width_min'],caisson['width_max'])):
+        if width >  caisson['width'] and height > caisson['height']:
             print("caisson")
             return CAISSON, rect
     print("others")
@@ -114,27 +113,43 @@ def get_contour_type(img,contour):
 def processImage(gray, contrast, thresh):
     img_with_colored_contours = contrast.copy()
     _,contours,hierarchy = cv2.findContours(thresh,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
-    # remove noise
-    #contours = remove_noise(contours)
+
     #find the type to the image
     state = ''
+    states =[]
     for contour in contours:
         state, rect = get_contour_type(gray,contour)
         if state == CRACK :
             color = BLUE
             folder = "crack/"
+            states.append(state)
         elif state == SEPARATION: 
             color = GREEN
             folder = "separation/"
+            states.append(state)
         elif state == CAISSON:
             color = RED
             folder = "caisson/"
+            states.append(state)
         elif state == OTHERS :
             color = YELLOW
             folder = "others/"
-                 
+            states.append(state)    
         box= cv2.boxPoints(rect)
         box = np.int0(box)
         cv2.drawContours(img_with_colored_contours,[box],0,color, 2)
 
+    if CRACK in states :
+        state = CRACK
+    if CRACK not in states: 
+        if SEPARATION in states:
+            state = SEPARATION
+            
+        if SEPARATION not in states:
+            if  CAISSON in states:
+                state = CAISSON
+            
+            if CAISSON not in states:
+                state = OTHERS
+            
     return img_with_colored_contours, state

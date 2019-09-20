@@ -50,18 +50,22 @@ def detectcrack(path):
         img_with_colored_contours, state = syrine.processImage(gray, contrast, thresh)
         if state == CRACK :
             print(imageName)
+            print(state)
             syrine.saveImage(folderFissure +"/"+ imageName, img_with_colored_contours)
         
         if state == SEPARATION :
             print(imageName)
+            print(state)
             syrine.saveImage(folderSeparation +"/"+ imageName, img_with_colored_contours)
 
         if state == CAISSON :
             print(imageName)
+            print(state)
             syrine.saveImage(folderCaisson +"/"+ imageName, img_with_colored_contours)
 
         if state ==OTHERS :
             print(imageName)
+            print(state)
             syrine.saveImage(folderOthers +"/" +imageName, img_with_colored_contours)
 
     print("Done")
