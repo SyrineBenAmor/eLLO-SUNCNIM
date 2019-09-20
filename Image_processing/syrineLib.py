@@ -16,7 +16,7 @@ OTHERS = "OTHERS"
 BLUE = (255,0,0)
 GREEN = (0,255,0)
 RED = (0,0,255)
-YELLOW = (0,0,0)
+YELLOW = (0,255,255)
 
 def crop(img, rect):
 
@@ -71,43 +71,42 @@ def get_contour_type(img,contour):
     if width > smallRect and height > smallRect :
         cropImage = crop(img, rect)
         mean = cropImage.mean()
-        print ("rect  =", rect)
-        print ("mean= ", mean)
+        #print ("rect  =", rect)
+        #print ("mean= ", mean)
         ##################################################  fisssure  ######################################
         width = rect[1][0]
         height = rect[1][1]
         
         if (mean > crack['mean']) :   
-            print("crack detected")
+            #print("crack detected")
             return CRACK, rect
 
         ##################################################  Separation  ######################################
         width = rect[1][0]
         height = rect[1][1]
         if ((mean < separation['mean']) and (width in range(separation['width_min'],separation['width_max'])) and (height in range(separation['height_min'],separation['height_max']))) :
-            print("separation")
+            #print("separation")
             return SEPARATION, rect
 
         width = rect[1][1]
         height = rect[1][0]
         if ((mean < separation['mean']) and (width in range(separation['width_min'],separation['width_max'])) and (height in range(separation['height_min'],separation['height_max']))) :
-            print("separation")
+            #print("separation")
             return SEPARATION, rect
 
         ##################################################  Caisson  ######################################
         width = rect[1][0]
         height = rect[1][1]
-        print("width1, height1",width, height)
         if width > caisson['width'] and height > caisson['height']:
-            print("caisson")
+            #print("caisson")
             return CAISSON, rect
 
         width = rect[1][1]
         height = rect[1][0]
         if width >  caisson['width'] and height > caisson['height']:
-            print("caisson")
+            #print("caisson")
             return CAISSON, rect
-    print("others")
+    #print("others")
     return OTHERS, rect
 
 def processImage(gray, contrast, thresh):
