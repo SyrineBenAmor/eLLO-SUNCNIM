@@ -30,3 +30,7 @@ docs/
 
 #ignore json
 *.json
+
+# ignore jpg
+
+*.jpg
