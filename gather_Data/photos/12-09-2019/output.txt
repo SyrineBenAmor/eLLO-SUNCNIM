@@ -1,0 +1,4693 @@
+lets start
+wait 17:41:58.997106
+wait 17:42:29.028194
+wait 17:42:59.059412
+wait 17:43:29.083495
+wait 17:43:59.113471
+wait 17:44:29.114883
+wait 17:44:59.145857
+wait 17:45:29.173513
+wait 17:45:59.194465
+wait 17:46:29.223534
+wait 17:46:59.249728
+wait 17:47:29.273470
+wait 17:47:59.303494
+wait 17:48:29.305293
+wait 17:48:59.336204
+wait 17:49:29.345338
+wait 17:49:59.376355
+wait 17:50:29.407518
+wait 17:50:59.432696
+wait 17:51:29.458361
+wait 17:51:59.470556
+wait 17:52:29.483520
+wait 17:52:59.493788
+wait 17:53:29.525177
+wait 17:53:59.556249
+wait 17:54:29.587407
+wait 17:54:59.613516
+wait 17:55:29.643476
+wait 17:55:59.668205
+wait 17:56:29.685322
+wait 17:56:59.701537
+wait 17:57:29.713509
+wait 17:57:59.728998
+wait 17:58:29.747711
+wait 17:58:59.759898
+wait 17:59:29.773541
+wait 17:59:59.790830
+wait 18:00:29.813541
+wait 18:00:59.842560
+wait 18:01:29.873752
+wait 18:01:59.903503
+wait 18:02:29.933514
+wait 18:02:59.964448
+wait 18:03:29.974464
+wait 18:04:00.003482
+wait 18:04:30.033314
+wait 18:05:00.048777
+wait 18:05:30.073490
+wait 18:06:00.089761
+wait 18:06:30.108550
+wait 18:07:00.127790
+wait 18:07:30.156134
+wait 18:08:00.187111
+wait 18:08:30.218082
+wait 18:09:00.235897
+wait 18:09:30.266950
+wait 18:10:00.293466
+wait 18:10:30.324423
+wait 18:11:00.331078
+wait 18:11:30.362161
+wait 18:12:00.378651
+wait 18:12:30.394136
+wait 18:13:00.425162
+wait 18:13:30.456148
+wait 18:14:00.483552
+wait 18:14:30.514229
+wait 18:15:00.525112
+wait 18:15:30.536973
+wait 18:16:00.556260
+wait 18:16:30.583488
+wait 18:17:00.614514
+wait 18:17:30.645611
+wait 18:18:00.674528
+wait 18:18:30.701370
+wait 18:19:00.723491
+wait 18:19:30.754519
+wait 18:20:00.768218
+wait 18:20:30.799296
+wait 18:21:00.823712
+wait 18:21:30.839205
+wait 18:22:00.870199
+wait 18:22:30.896428
+wait 18:23:00.927519
+wait 18:23:30.958507
+wait 18:24:00.973480
+wait 18:24:31.003521
+wait 18:25:01.034714
+wait 18:25:31.046279
+wait 18:26:01.048375
+wait 18:26:31.077176
+wait 18:27:01.083505
+wait 18:27:31.114649
+wait 18:28:01.123590
+wait 18:28:31.125678
+wait 18:29:01.141084
+wait 18:29:31.169960
+wait 18:30:01.172411
+wait 18:30:31.184274
+wait 18:31:01.213476
+wait 18:31:31.244508
+wait 18:32:01.275550
+wait 18:32:31.303518
+wait 18:33:01.334707
+wait 18:33:31.363981
+wait 18:34:01.395159
+wait 18:34:31.426470
+wait 18:35:01.443761
+wait 18:35:31.456000
+wait 18:36:01.487180
+wait 18:36:31.503122
+wait 18:37:01.534210
+wait 18:37:31.565190
+wait 18:38:01.569666
+wait 18:38:31.581757
+wait 18:39:01.597191
+wait 18:39:31.603479
+wait 18:40:01.634474
+wait 18:40:31.665633
+wait 18:41:01.679216
+wait 18:41:31.710438
+wait 18:42:01.741495
+wait 18:42:31.743539
+wait 18:43:01.774211
+wait 18:43:31.800108
+wait 18:44:01.804723
+wait 18:44:31.835655
+wait 18:45:01.852575
+wait 18:45:31.875517
+wait 18:46:01.906404
+wait 18:46:31.933608
+wait 18:47:01.944646
+wait 18:47:31.975762
+wait 18:48:02.006796
+wait 18:48:32.033501
+wait 18:49:02.064567
+wait 18:49:32.093480
+wait 18:50:02.123548
+wait 18:50:32.139211
+wait 18:51:02.163514
+wait 18:51:32.193551
+wait 18:52:02.219084
+wait 18:52:32.248060
+wait 18:53:02.273545
+wait 18:53:32.295653
+wait 18:54:02.325821
+wait 18:54:32.353473
+wait 18:55:02.384462
+wait 18:55:32.415454
+wait 18:56:02.443500
+wait 18:56:32.473529
+wait 18:57:02.503922
+wait 18:57:32.531429
+wait 18:58:02.537018
+wait 18:58:32.553822
+wait 18:59:02.584830
+wait 18:59:32.598886
+wait 19:00:02.629908
+wait 19:00:32.660938
+wait 19:01:02.664886
+wait 19:01:32.696212
+wait 19:02:02.727310
+wait 19:02:32.742649
+wait 19:03:02.749851
+wait 19:03:32.765442
+wait 19:04:02.773471
+wait 19:04:32.804470
+wait 19:05:02.821839
+wait 19:05:32.852819
+wait 19:06:02.884252
+wait 19:06:32.900941
+wait 19:07:02.923477
+wait 19:07:32.954511
+wait 19:08:02.978015
+wait 19:08:33.003538
+wait 19:09:03.033505
+wait 19:09:33.063527
+wait 19:10:03.093529
+wait 19:10:33.113520
+wait 19:11:03.144629
+wait 19:11:33.175601
+wait 19:12:03.187159
+wait 19:12:33.203476
+wait 19:13:03.234390
+wait 19:13:33.265398
+wait 19:14:03.296412
+wait 19:14:33.327422
+wait 19:15:03.353486
+wait 19:15:33.362889
+wait 19:16:03.393634
+wait 19:16:33.424792
+wait 19:17:03.439252
+wait 19:17:33.463601
+wait 19:18:03.494727
+wait 19:18:33.525878
+wait 19:19:03.556975
+wait 19:19:33.565838
+wait 19:20:03.585889
+wait 19:20:33.614142
+wait 19:21:03.643520
+wait 19:21:33.664951
+wait 19:22:03.693525
+wait 19:22:33.695943
+wait 19:23:03.724787
+wait 19:23:33.753577
+wait 19:24:03.755717
+wait 19:24:33.786834
+wait 19:25:03.817643
+wait 19:25:33.848778
+wait 19:26:03.879768
+wait 19:26:33.910949
+wait 19:27:03.918889
+wait 19:27:33.949877
+wait 19:28:03.980880
+wait 19:28:33.998138
+wait 19:29:04.013349
+wait 19:29:34.044474
+wait 19:30:04.061663
+wait 19:30:34.092668
+wait 19:31:04.123872
+wait 19:31:34.154842
+wait 19:32:04.185866
+wait 19:32:34.210737
+wait 19:33:04.217479
+wait 19:33:34.248810
+wait 19:34:04.279964
+wait 19:34:34.292438
+wait 19:35:04.323791
+wait 19:35:34.354953
+wait 19:36:04.386018
+wait 19:36:34.417174
+wait 19:37:04.448279
+wait 19:37:34.459625
+wait 19:38:04.490976
+wait 19:38:34.504448
+wait 19:39:04.519705
+wait 19:39:34.532489
+wait 19:40:04.563649
+wait 19:40:34.593515
+wait 19:41:04.601779
+wait 19:41:34.623742
+wait 19:42:04.654040
+wait 19:42:34.661325
+wait 19:43:04.692478
+wait 19:43:34.723522
+wait 19:44:04.754662
+wait 19:44:34.783735
+wait 19:45:04.811859
+wait 19:45:34.840810
+wait 19:46:04.869554
+wait 19:46:34.900744
+wait 19:47:04.931938
+wait 19:47:34.953817
+wait 19:48:04.984719
+wait 19:48:35.011958
+wait 19:49:05.015515
+wait 19:49:35.043503
+wait 19:50:05.074486
+wait 19:50:35.099081
+wait 19:51:05.107525
+wait 19:51:35.133462
+wait 19:52:05.158623
+wait 19:52:35.180134
+wait 19:53:05.203481
+wait 19:53:35.227844
+wait 19:54:05.233660
+wait 19:54:35.263467
+wait 19:55:05.293482
+wait 19:55:35.324470
+wait 19:56:05.349349
+wait 19:56:35.367343
+wait 19:57:05.398311
+wait 19:57:35.423511
+wait 19:58:05.433585
+wait 19:58:35.447655
+wait 19:59:05.473570
+wait 19:59:35.483481
+wait 20:00:05.502623
+wait 20:00:35.533474
+wait 20:01:05.536420
+wait 20:01:35.563486
+wait 20:02:05.593510
+wait 20:02:35.612460
+wait 20:03:05.643506
+wait 20:03:35.665444
+wait 20:04:05.669871
+wait 20:04:35.675174
+wait 20:05:05.694338
+wait 20:05:35.710153
+wait 20:06:05.724811
+wait 20:06:35.740715
+wait 20:07:05.770839
+wait 20:07:35.788381
+wait 20:08:05.816739
+wait 20:08:35.843513
+wait 20:09:05.873493
+wait 20:09:35.899733
+wait 20:10:05.923474
+wait 20:10:35.953832
+wait 20:11:05.984806
+wait 20:11:36.015758
+wait 20:12:06.044203
+wait 20:12:36.058970
+wait 20:13:06.083494
+wait 20:13:36.113529
+wait 20:14:06.141348
+wait 20:14:36.172464
+wait 20:15:06.203519
+wait 20:15:36.233512
+wait 20:16:06.247528
+wait 20:16:36.249206
+wait 20:17:06.273554
+wait 20:17:36.304617
+wait 20:18:06.335677
+wait 20:18:36.366827
+wait 20:19:06.397953
+wait 20:19:36.405750
+wait 20:20:06.407889
+wait 20:20:36.416602
+wait 20:21:06.423544
+wait 20:21:36.450982
+wait 20:22:06.473528
+wait 20:22:36.504529
+wait 20:23:06.533516
+wait 20:23:36.564678
+wait 20:24:06.595673
+wait 20:24:36.626673
+wait 20:25:06.657636
+wait 20:25:36.688658
+wait 20:26:06.719619
+wait 20:26:36.722308
+wait 20:27:06.753452
+wait 20:27:36.784606
+wait 20:28:06.815667
+wait 20:28:36.823496
+wait 20:29:06.834211
+wait 20:29:36.865211
+wait 20:30:06.896182
+wait 20:30:36.912654
+wait 20:31:06.943717
+wait 20:31:36.974700
+wait 20:32:07.005743
+wait 20:32:37.036782
+wait 20:33:07.056690
+wait 20:33:37.083526
+wait 20:34:07.113535
+wait 20:34:37.143568
+wait 20:35:07.173495
+wait 20:35:37.203527
+wait 20:36:07.216105
+wait 20:36:37.243483
+wait 20:37:07.274468
+wait 20:37:37.305441
+wait 20:38:07.336404
+wait 20:38:37.367405
+wait 20:39:07.398352
+wait 20:39:37.429316
+wait 20:40:07.460388
+wait 20:40:37.488634
+wait 20:41:07.519665
+wait 20:41:37.550643
+wait 20:42:07.581671
+wait 20:42:37.583874
+wait 20:43:07.615087
+wait 20:43:37.646194
+wait 20:44:07.677228
+wait 20:44:37.708266
+wait 20:45:07.714306
+wait 20:45:37.743492
+wait 20:46:07.745188
+wait 20:46:37.776227
+wait 20:47:07.789708
+wait 20:47:37.792337
+wait 20:48:07.806934
+wait 20:48:37.826007
+wait 20:49:07.856967
+wait 20:49:37.883458
+wait 20:50:07.885526
+wait 20:50:37.897953
+wait 20:51:07.923487
+wait 20:51:37.928918
+wait 20:52:07.931216
+wait 20:52:37.962267
+wait 20:53:07.986086
+wait 20:53:38.017244
+wait 20:54:08.048424
+wait 20:54:38.055619
+wait 20:55:08.068769
+wait 20:55:38.093507
+wait 20:56:08.116975
+wait 20:56:38.133581
+wait 20:57:08.163535
+wait 20:57:38.192731
+wait 20:58:08.224009
+wait 20:58:38.255076
+wait 20:59:08.264690
+wait 20:59:38.276346
+wait 21:00:08.307359
+wait 21:00:38.338334
+wait 21:01:08.339446
+wait 21:01:38.370562
+wait 21:02:08.401739
+wait 21:02:38.422030
+wait 21:03:08.448968
+wait 21:03:38.480141
+wait 21:04:08.485518
+wait 21:04:38.516579
+wait 21:05:08.547544
+wait 21:05:38.553551
+wait 21:06:08.564355
+wait 21:06:38.579473
+wait 21:07:08.603478
+wait 21:07:38.631727
+wait 21:08:08.642663
+wait 21:08:38.654738
+wait 21:09:08.683548
+wait 21:09:38.685658
+wait 21:10:08.704286
+wait 21:10:38.735413
+wait 21:11:08.766538
+wait 21:11:38.797690
+wait 21:12:08.823483
+wait 21:12:38.848453
+wait 21:13:08.860563
+wait 21:13:38.879184
+wait 21:14:08.903516
+wait 21:14:38.934644
+wait 21:15:08.964260
+wait 21:15:38.993484
+wait 21:16:09.023552
+wait 21:16:39.054731
+wait 21:17:09.085775
+wait 21:17:39.113557
+wait 21:18:09.143491
+wait 21:18:39.174613
+wait 21:19:09.199176
+wait 21:19:39.223479
+wait 21:20:09.253485
+wait 21:20:39.255983
+wait 21:21:09.264518
+wait 21:21:39.293467
+wait 21:22:09.314064
+wait 21:22:39.343827
+wait 21:23:09.369127
+wait 21:23:39.400173
+wait 21:24:09.431130
+wait 21:24:39.449629
+wait 21:25:09.473514
+wait 21:25:39.503976
+wait 21:26:09.507837
+wait 21:26:39.523620
+wait 21:27:09.530302
+wait 21:27:39.553505
+wait 21:28:09.584569
+wait 21:28:39.615725
+wait 21:29:09.633508
+wait 21:29:39.663492
+wait 21:30:09.694463
+wait 21:30:39.725433
+wait 21:31:09.753465
+wait 21:31:39.766136
+wait 21:32:09.793543
+wait 21:32:39.824652
+wait 21:33:09.853491
+wait 21:33:39.864755
+wait 21:34:09.893536
+wait 21:34:39.923059
+wait 21:35:09.953534
+wait 21:35:39.960343
+wait 21:36:09.975847
+wait 21:36:40.003476
+wait 21:37:10.019585
+wait 21:37:40.033796
+wait 21:38:10.063493
+wait 21:38:40.092777
+wait 21:39:10.114799
+wait 21:39:40.143526
+wait 21:40:10.165601
+wait 21:40:40.171419
+wait 21:41:10.202616
+wait 21:41:40.225436
+wait 21:42:10.256422
+wait 21:42:40.287370
+wait 21:43:10.318347
+wait 21:43:40.349296
+wait 21:44:10.380192
+wait 21:44:40.384950
+wait 21:45:10.409461
+wait 21:45:40.440568
+wait 21:46:10.471743
+wait 21:46:40.480108
+wait 21:47:10.503989
+wait 21:47:40.535110
+wait 21:48:10.557488
+wait 21:48:40.558675
+wait 21:49:10.574129
+wait 21:49:40.605300
+wait 21:50:10.636380
+wait 21:50:40.667420
+wait 21:51:10.685968
+wait 21:51:40.716911
+wait 21:52:10.747827
+wait 21:52:40.752203
+wait 21:53:10.783347
+wait 21:53:40.814532
+wait 21:54:10.817312
+wait 21:54:40.830845
+wait 21:55:10.843012
+wait 21:55:40.874054
+wait 21:56:10.877068
+wait 21:56:40.889498
+wait 21:57:10.920732
+wait 21:57:40.943473
+wait 21:58:10.955635
+wait 21:58:40.971532
+wait 21:59:11.002524
+wait 21:59:41.033601
+wait 22:00:11.050917
+wait 22:00:41.079834
+wait 22:01:11.102978
+wait 22:01:41.133559
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+End
+lets start
+wait 22:55:07.674162
+wait 22:55:37.705694
+wait 22:56:07.736807
+wait 22:56:37.748092
+wait 22:57:07.776094
+wait 22:57:37.797466
+wait 22:58:07.823490
+wait 22:58:37.850506
+wait 22:59:07.881720
+wait 22:59:37.908099
+wait 23:00:07.939333
+wait 23:00:37.955569
+wait 23:01:07.968084
+wait 23:01:37.994062
+wait 23:02:08.012722
+wait 23:02:38.043831
+wait 23:03:08.074591
+wait 23:03:38.105383
+wait 23:04:08.136387
+wait 23:04:38.163623
+wait 23:05:08.191824
+wait 23:05:38.213604
+wait 23:06:08.218306
+wait 23:06:38.246723
+wait 23:07:08.275913
+wait 23:07:38.303518
+wait 23:08:08.333439
+wait 23:08:38.340420
+wait 23:09:08.371914
+wait 23:09:38.393508
+wait 23:10:08.399828
+wait 23:10:38.427422
+wait 23:11:08.431172
+wait 23:11:38.453550
+wait 23:12:08.483550
+wait 23:12:38.490458
+wait 23:13:08.513501
+wait 23:13:38.543544
+wait 23:14:08.573452
+wait 23:14:38.603654
+wait 23:15:08.634451
+wait 23:15:38.663497
+wait 23:16:08.693540
+wait 23:16:38.723533
+wait 23:17:08.753566
+wait 23:17:38.783559
+wait 23:18:08.810573
+wait 23:18:38.833471
+wait 23:19:08.863666
+wait 23:19:38.893470
+wait 23:20:08.923473
+wait 23:20:38.946512
+wait 23:21:08.973886
+wait 23:21:39.006956
+wait 23:22:09.037916
+wait 23:22:39.069009
+wait 23:23:09.093471
+wait 23:23:39.123693
+wait 23:24:09.129475
+wait 23:24:39.140262
+wait 23:25:09.171239
+wait 23:25:39.179611
+wait 23:26:09.202998
+wait 23:26:39.210731
+wait 23:27:09.214759
+wait 23:27:39.243671
+wait 23:28:09.273449
+wait 23:28:39.302973
+wait 23:29:09.317512
+wait 23:29:39.343530
+wait 23:30:09.374708
+wait 23:30:39.402839
+wait 23:31:09.434607
+wait 23:31:39.463564
+wait 23:32:09.493494
+wait 23:32:39.524094
+wait 23:33:09.541207
+wait 23:33:39.572372
+wait 23:34:09.603823
+wait 23:34:39.633765
+wait 23:35:09.665647
+wait 23:35:39.693619
+wait 23:36:09.721848
+wait 23:36:39.752859
+wait 23:37:09.783510
+wait 23:37:39.813768
+wait 23:38:09.836907
+wait 23:38:39.864792
+wait 23:39:09.880196
+wait 23:39:39.908936
+wait 23:40:09.940000
+wait 23:40:39.971148
+wait 23:41:09.993507
+wait 23:41:40.024751
+wait 23:42:10.053500
+wait 23:42:40.081452
+wait 23:43:10.103646
+wait 23:43:40.133473
+wait 23:44:10.134628
+wait 23:44:40.163668
+wait 23:45:10.194921
+wait 23:45:40.223509
+wait 23:46:10.253668
+wait 23:46:40.262198
+wait 23:47:10.274259
+wait 23:47:40.290678
+wait 23:48:10.322041
+wait 23:48:40.353124
+wait 23:49:10.384403
+wait 23:49:40.407922
+wait 23:50:10.420438
+wait 23:50:40.443704
+wait 23:51:10.473524
+wait 23:51:40.503566
+wait 23:52:10.533730
+wait 23:52:40.563514
+wait 23:53:10.593178
+wait 23:53:40.624424
+wait 23:54:10.655796
+wait 23:54:40.686923
+wait 23:55:10.713527
+wait 23:55:40.743529
+wait 23:56:10.769316
+wait 23:56:40.797523
+wait 23:57:10.823521
+wait 23:57:40.852354
+wait 23:58:10.867834
+wait 23:58:40.894317
+wait 23:59:10.923480
+wait 23:59:40.953737
+wait 00:00:10.983517
+wait 00:00:41.013532
+wait 00:01:11.044013
+wait 00:01:41.075056
+wait 00:02:11.104893
+wait 00:02:41.133620
+wait 00:03:11.163574
+wait 00:03:41.193462
+wait 00:04:11.220352
+wait 00:04:41.251411
+wait 00:05:11.282433
+wait 00:05:41.313164
+wait 00:06:11.342307
+wait 00:06:41.363929
+wait 00:07:11.393516
+wait 00:07:41.423657
+wait 00:08:11.431428
+wait 00:08:41.462537
+wait 00:09:11.471399
+wait 00:09:41.502387
+wait 00:10:11.533453
+wait 00:10:41.567765
+wait 00:11:11.570771
+wait 00:11:41.599314
+wait 00:12:11.623501
+wait 00:12:41.653481
+wait 00:13:11.669017
+wait 00:13:41.697656
+wait 00:14:11.727912
+wait 00:14:41.753606
+wait 00:15:11.783548
+wait 00:15:41.814671
+wait 00:16:11.845773
+wait 00:16:41.869823
+wait 00:17:11.892048
+wait 00:17:41.917711
+wait 00:18:11.943506
+wait 00:18:41.974625
+wait 00:19:12.003496
+wait 00:19:42.034657
+wait 00:20:12.065792
+wait 00:20:42.077501
+wait 00:21:12.092579
+wait 00:21:42.123773
+wait 00:22:12.154913
+wait 00:22:42.183508
+wait 00:23:12.214706
+wait 00:23:42.223657
+wait 00:24:12.235349
+wait 00:24:42.266323
+wait 00:25:12.269863
+wait 00:25:42.301035
+wait 00:26:12.330655
+wait 00:26:42.353534
+wait 00:27:12.383621
+wait 00:27:42.414779
+wait 00:28:12.445895
+wait 00:28:42.457871
+wait 00:29:12.488870
+wait 00:29:42.519885
+wait 00:30:12.550951
+wait 00:30:42.581984
+wait 00:31:12.603870
+wait 00:31:42.639665
+wait 00:32:12.670644
+wait 00:32:42.701258
+wait 00:33:12.717438
+wait 00:33:42.748927
+wait 00:34:12.761328
+wait 00:34:42.763848
+wait 00:35:12.794950
+wait 00:35:42.824496
+wait 00:36:12.837522
+wait 00:36:42.863551
+wait 00:37:12.894506
+wait 00:37:42.923053
+wait 00:38:12.933508
+wait 00:38:42.943632
+wait 00:39:12.960391
+wait 00:39:42.984831
+wait 00:40:13.013462
+wait 00:40:43.044448
+wait 00:41:13.063322
+wait 00:41:43.094472
+wait 00:42:13.125629
+wait 00:42:43.156783
+wait 00:43:13.183492
+wait 00:43:43.213540
+wait 00:44:13.244665
+wait 00:44:43.273575
+wait 00:45:13.284907
+wait 00:45:43.315900
+wait 00:46:13.346884
+wait 00:46:43.377751
+wait 00:47:13.408747
+wait 00:47:43.433520
+wait 00:48:13.464615
+wait 00:48:43.479872
+wait 00:49:13.510867
+wait 00:49:43.527816
+wait 00:50:13.558559
+wait 00:50:43.589540
+wait 00:51:13.603832
+wait 00:51:43.619303
+wait 00:52:13.621552
+wait 00:52:43.652844
+wait 00:53:13.668810
+wait 00:53:43.684246
+wait 00:54:13.696633
+wait 00:54:43.723499
+wait 00:55:13.748065
+wait 00:55:43.779058
+wait 00:56:13.810383
+wait 00:56:43.828056
+wait 00:57:13.853488
+wait 00:57:43.884622
+wait 00:58:13.915736
+wait 00:58:43.935831
+wait 00:59:13.965780
+wait 00:59:43.996962
+wait 01:00:14.028087
+wait 01:00:44.033682
+wait 01:01:14.063498
+wait 01:01:44.085745
+wait 01:02:14.094120
+wait 01:02:44.116025
+wait 01:03:14.125040
+wait 01:03:44.156128
+wait 01:04:14.168517
+wait 01:04:44.199681
+wait 01:05:14.230759
+wait 01:05:44.253545
+wait 01:06:14.284601
+wait 01:06:44.315601
+wait 01:07:14.346744
+wait 01:07:44.377890
+wait 01:08:14.403519
+wait 01:08:44.433552
+wait 01:09:14.463557
+wait 01:09:44.493490
+wait 01:10:14.511231
+wait 01:10:44.523681
+wait 01:11:14.542824
+wait 01:11:44.557959
+wait 01:12:14.586769
+wait 01:12:44.617959
+wait 01:13:14.634424
+wait 01:13:44.665544
+wait 01:14:14.693532
+wait 01:14:44.723672
+wait 01:15:14.729536
+wait 01:15:44.731896
+wait 01:16:14.739465
+wait 01:16:44.765685
+wait 01:17:14.796834
+wait 01:17:44.827272
+wait 01:18:14.839020
+wait 01:18:44.841246
+wait 01:19:14.871869
+wait 01:19:44.875011
+wait 01:20:14.906088
+wait 01:20:44.936457
+wait 01:21:14.965180
+wait 01:21:44.993567
+wait 01:22:15.004097
+wait 01:22:45.035197
+wait 01:23:15.063521
+wait 01:23:45.079508
+wait 01:24:15.091251
+wait 01:24:45.122253
+wait 01:25:15.143791
+wait 01:25:45.152313
+wait 01:26:15.165621
+wait 01:26:45.171767
+wait 01:27:15.203059
+wait 01:27:45.234186
+wait 01:28:15.251859
+wait 01:28:45.259536
+wait 01:29:15.283764
+wait 01:29:45.313640
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2
+save GPS & accelerometer data
+picture 1
+picture 2

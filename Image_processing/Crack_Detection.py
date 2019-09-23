@@ -40,18 +40,20 @@ def detectcrack(path):
         i+=1
         imageName = imagePath.split("/")[-1] # take the latest element as name of the image
         gray = syrine.loadImage(imagePath)  #Load a single imge  
-        mean = int(gray.mean())    
+        #mean = int(gray.mean())    
         #print("mean = " ,str(mean))
         thresh = syrine.threshold(gray,"triangle")     # binarization of the loaded image
+        # chose alpha and beta to adjust contrast of the img
         alpha = 3.0
         beta= 0
         contrast = syrine.contrast(gray, alpha, beta)
         #syrine.show('Contrast', contrast)
+        # call processImage function
         img_with_colored_contours, state = syrine.processImage(gray, contrast, thresh)
         if state == CRACK :
             print(imageName)
             print(state)
-            syrine.saveImage(folderFissure +"/"+ imageName, img_with_colored_contours)
+            syrine.saveImage(folderFissure +"/"+ imageName, img_with_colored_contours) # save img in crack folder
         
         if state == SEPARATION :
             print(imageName)
